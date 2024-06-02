@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>windowUI_login</class>
+ <widget class="QMainWindow" name="windowUI_login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>728</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>728</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>728</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Quản lý sinh viên</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 #92FFC0, stop:1 #002661);
+	border-radius: 20px;
+}
+
+QFrame#frame_parent{	
+	margin: 10px;
+	border-radius: 20px;
+	background-color: rgba(225, 228, 221, 120)
+}
+
+QLineEdit{
+	min-height: 45px;
+	border-radius: 20px;
+	background-color: #FFFFFF;
+	padding-left: 20px;
+	color: rgb(140, 140, 140);
+}
+
+QLineEdit:hover{
+	border: 2px solid rgb(139, 142, 139);
+}
+
+QPushButton#pushButton_login{
+	min-height: 45px;
+	border-radius: 20px;
+	background-color: #005662;
+	color: #FFFFFF;
+}
+
+QPushButton#pushButton_login:hover{
+	border: 2px solid rgb(255, 255, 255);
+}
+
+QCheckBox{
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+QLabel{
+	color: rgb(95, 94, 108);
+}
+
+QPushButton#pushButton_forgot{
+	border: 0px;
+	font-style: italic;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+</string>
+   </property>
+   <widget class="QFrame" name="frame_bottom">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>1024</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <widget class="QFrame" name="frame_parent">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>80</y>
+       <width>800</width>
+       <height>500</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QFrame" name="frame_title">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>761</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_title">
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>-1</pointsize>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255,255,255);
+font-family: 'Segoe UI Light', 'Segoe UI', Arial, sans-serif;
+font-size:20px;
+</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:600;&quot;&gt;QUẢN LÝ SINH VIÊN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_login">
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255,255,255);</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#00557f;&quot;&gt;ĐĂNG NHẬP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>761</width>
+        <height>331</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_username">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>40</y>
+         <width>600</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>tên đăng nhập</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>100</y>
+         <width>600</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>mật khẩu</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>240</y>
+         <width>601</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QCheckBox" name="checkBox_remember">
+          <property name="font">
+           <font>
+            <family>Bahnschrift</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Ghi nhớ mật khẩu</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_forgot">
+          <property name="font">
+           <font>
+            <family>Bahnschrift</family>
+            <pointsize>-1</pointsize>
+            <italic>true</italic>
+           </font>
+          </property>
+          <property name="text">
+           <string>Quên mật khẩu?</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton_login">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>180</y>
+         <width>600</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Đăng nhập</string>
+       </property>
+      </widget>
+      <zorder>pushButton_login</zorder>
+      <zorder>lineEdit_username</zorder>
+      <zorder>lineEdit_password</zorder>
+      <zorder>frame_3</zorder>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_top">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font-size: 30px;
+	font-weight: bold;
+}
+QPushButton#pushButton_minimize{
+	color: lightgreen;
+}
+QPushButton#pushButton_max{
+	color: Yellow;
+}
+QPushButton#pushButton_close{
+	color: red;
+}</string>
+    </property>
+    <layout class="QHBoxLayout" name="frame_top_west">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="frame_user_2">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_37">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="lab_user_2">
+          <property name="font">
+           <font>
+            <family>Segoe UI Light</family>
+            <pointsize>24</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(255,255,255);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_person_2">
+       <property name="minimumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_36">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="lab_person_2">
+          <property name="maximumSize">
+           <size>
+            <width>55</width>
+            <height>55</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_min_2">
+       <property name="minimumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_32">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_minimize">
+          <property name="maximumSize">
+           <size>
+            <width>55</width>
+            <height>55</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Thu nhỏ</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+QPushButton:hover {
+	background-color: rgb(0,143,150);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}</string>
+          </property>
+          <property name="text">
+           <string>🗕︎</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_max_2">
+       <property name="minimumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_33">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_max">
+          <property name="maximumSize">
+           <size>
+            <width>55</width>
+            <height>55</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::StrongFocus</enum>
+          </property>
+          <property name="toolTip">
+           <string>Phóng to</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+QPushButton:hover {
+	background-color: rgb(0,143,150);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}</string>
+          </property>
+          <property name="text">
+           <string>🗖︎</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_close_3">
+       <property name="minimumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>55</width>
+         <height>55</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_34">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_close">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>55</width>
+            <height>55</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Đóng</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+QPushButton:hover {
+	background-color: rgb(0,143,150);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}</string>
+          </property>
+          <property name="text">
+           <string>🗙︎</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons/quanlySinhVien.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>windowUI_main</class>
+ <widget class="QMainWindow" name="windowUI_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1366</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1366</width>
+    <height>768</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1366</width>
+    <height>768</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 #92FFC0, stop:1 #002661);
+	border-radius: 20px;
+}
+QFrame#frame_bottom_content{
+	background-color: rgba(255, 255, 255, 128);
+}
+QStackedWidget#stackedWidget_content{
+	background-color: rgba(255, 255, 255, 0);
+}
+QGroupBox{
+	color: white;
+}
+QLineEdit{
+	min-height: 45px;
+	border-radius: 20px;
+	background-color: white;
+	padding-left: 20px;
+	color: white;
+}
+
+QLineEdit:hover{
+	border: 2px solid rgb(139, 142, 139);
+}
+QPushButton{
+/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame_top">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_31">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_top_P">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+QPushButton:hover {
+	background-color: rgb(0,143,150);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="frame_top_west">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_user_2">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_37">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="lab_user_2">
+               <property name="font">
+                <font>
+                 <family>Segoe UI Light</family>
+                 <pointsize>24</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color:rgb(255,255,255);</string>
+               </property>
+               <property name="text">
+                <string>Admin</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_person_2">
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_36">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="lab_person_2">
+               <property name="maximumSize">
+                <size>
+                 <width>55</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap resource="icons/quanlySinhVien.qrc">:/icons/1x/peple.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_min_2">
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_32">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_minimize">
+               <property name="maximumSize">
+                <size>
+                 <width>55</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Minimize</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/hideAsset 53.png</normaloff>:/icons/1x/hideAsset 53.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_max_2">
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_33">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_max">
+               <property name="maximumSize">
+                <size>
+                 <width>55</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Maximize</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/max.png</normaloff>:/icons/1x/max.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_close_3">
+            <property name="minimumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>55</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_34">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_close">
+               <property name="maximumSize">
+                <size>
+                 <width>55</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Close</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/closeAsset 43.png</normaloff>:/icons/1x/closeAsset 43.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_bottom">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_38">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_bottom_menu">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border: none;
+	background-color: rgba(0,0,0,0);
+	font-family: 'Segoe UI Light', 'Segoe UI', Arial, sans-serif;
+	font-size: 18px;
+	color: white;
+}
+QPushButton:hover {
+	background-color: rgb(0,143,150);
+}
+QPushButton:pressed {	
+	background-color: rgba(0,0,0,0);
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_16">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="menu_button_1">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_39">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_home">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Home</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Trang chủ</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/homeAsset 46.png</normaloff>:/icons/1x/homeAsset 46.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="menu_button_2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_40">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_sinhvien">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Bug</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Sinh viên</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/peopleAsset 62.png</normaloff>:/icons/1x/peopleAsset 62.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="menu_button_3">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_41">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_diemso">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Cloud</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Điểm số</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/bookAsset 57.png</normaloff>:/icons/1x/bookAsset 57.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>22</width>
+                 <height>12</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="menu_button_4">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_42">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_doan">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>55</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Android</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Môn học</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons/quanlySinhVien.qrc">
+                 <normaloff>:/icons/1x/smileAsset 1.png</normaloff>:/icons/1x/smileAsset 1.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>22</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="menu_button_5">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_17">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_bottom_content">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="horizontalFrame">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_43">
+             <item>
+              <widget class="QStackedWidget" name="stackedWidget_content">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(5, 50, 100, 50);</string>
+               </property>
+               <property name="currentIndex">
+                <number>2</number>
+               </property>
+               <widget class="QWidget" name="page"/>
+               <widget class="QWidget" name="page_1_home">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QFrame" name="frame_page_1_top">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1095</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="autoFillBackground">
+                  <bool>false</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_22">
+                  <item>
+                   <widget class="QLabel" name="label_page_1_title">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>55</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>55</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>MS Shell Dlg 2</family>
+                      <pointsize>24</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(5, 50, 100, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; color:#00ffff; font-family:'Segoe UI','Segoe UI','Arial','sans-serif';&quot;&gt;THÔNG TIN ĐỒ ÁN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="textFormat">
+                     <enum>Qt::RichText</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QFrame" name="frame_page_1_bottom">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>90</y>
+                   <width>1095</width>
+                   <height>562</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_23">
+                  <item>
+                   <widget class="QLabel" name="label_page_1_thongtin">
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(5, 50, 100, 0);</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Quản lý sinh viên&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            color: #ffffff; 
+            background-color: transparent; 
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffffff; 
+        }
+        .student-list {
+            padding: 0;
+            list-style-position: inside; /* Đặt vị trí số bên trong danh sách */
+        }
+        .student-list li {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .student-id {
+            font-weight: bold;
+        }
+        .student-name {
+            color: #ffffff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h1&gt;Quản lý sinh viên&lt;/h1&gt;
+        &lt;p&gt;Sinh viên thực hiện:&lt;/p&gt;
+        &lt;ol class=&quot;student-list&quot;&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;student-id&quot;&gt;LT.2023.01 - 23410023&lt;/span&gt; - &lt;span class=&quot;student-name&quot;&gt;Mai Kim Lan&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;student-id&quot;&gt;LT.2023.01 - 23410024&lt;/span&gt; - &lt;span class=&quot;student-name&quot;&gt;Đàm Mỹ Linh&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                    <property name="margin">
+                     <number>5</number>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_2_sinhvien">
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+background-color: rgba(0, 0, 0, 0);
+}
+QGroupBox{
+background-color: rgba(0, 0, 0, 0);
+}
+QTableWidget{
+background-color: rgba(0, 0, 0, 0);
+}
+
+QLineEdit{
+	min-height: 45px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+
+QLineEdit:hover{
+	border: 2px solid rgb(139, 142, 139);
+}
+QLabel#label_page_2_title{
+    color: #00ffff;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+QLabel{
+	background-color: rgba(0, 0, 0, 0);
+    color: lightblue;
+    font-size: 20px;
+	font-weight: bold;
+}</string>
+                </property>
+                <widget class="QFrame" name="frame_page_2_sinhvien_main">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1181</width>
+                   <height>671</height>
+                  </rect>
+                 </property>
+                 <widget class="QWidget" name="widget_page_2_sinhvien_left" native="true">
+                  <property name="geometry">
+                   <rect>
+                    <x>180</x>
+                    <y>0</y>
+                    <width>16777215</width>
+                    <height>667</height>
+                   </rect>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <property name="sizeConstraint">
+                    <enum>QLayout::SetFixedSize</enum>
+                   </property>
+                   <property name="leftMargin">
+                    <number>1</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>1</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>1</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>1</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="widget_page_2_title" native="true">
+                     <layout class="QVBoxLayout" name="verticalLayout_9">
+                      <item>
+                       <widget class="QLabel" name="label_page_2_title">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>25</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;QUẢN LÝ SINH VIÊN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="groupBox_page_2">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>135</height>
+                         </size>
+                        </property>
+                        <property name="title">
+                         <string>Tìm kiếm</string>
+                        </property>
+                        <widget class="QFrame" name="horizontalFrame_page_2">
+                         <property name="geometry">
+                          <rect>
+                           <x>50</x>
+                           <y>5</y>
+                           <width>741</width>
+                           <height>131</height>
+                          </rect>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout">
+                          <item>
+                           <widget class="QFrame" name="verticalFrame_page_2_a">
+                            <property name="minimumSize">
+                             <size>
+                              <width>130</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">
+background-color: rgba(0, 0, 0, 0);
+</string>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_2">
+                             <item>
+                              <widget class="QLabel" name="label_page_2_search1">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true"/>
+                               </property>
+                               <property name="text">
+                                <string>Mã số sinh viên</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_page_2_search2">
+                               <property name="text">
+                                <string>Tên sinh viên</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="verticalFrame_page_2_b">
+                            <layout class="QVBoxLayout" name="verticalLayout_11">
+                             <item>
+                              <widget class="QLineEdit" name="lineEdit_page_2_search1"/>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="lineEdit_page_2_search2"/>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="verticalFrame_page_2_c">
+                            <property name="minimumSize">
+                             <size>
+                              <width>140</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_13">
+                             <item>
+                              <widget class="QPushButton" name="pushButton_page_2_search1">
+                               <property name="text">
+                                <string>Tìm kiếm</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_page_2_search2">
+                               <property name="text">
+                                <string>Làm mới</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QWidget" name="widget_page_2_content" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>461</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>461</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_7">
+                      <item>
+                       <widget class="QTableWidget" name="tableWidget_page2">
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>16777215</height>
+                         </size>
+                        </property>
+                        <property name="rowCount">
+                         <number>20</number>
+                        </property>
+                        <property name="columnCount">
+                         <number>15</number>
+                        </property>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <row/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                        <column/>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_3_diemso">
+                <widget class="QFrame" name="frame_page_3_bottom">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>90</y>
+                   <width>1095</width>
+                   <height>562</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget_diemso"/>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QFrame" name="frame_page_3_top">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1095</width>
+                   <height>81</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_20">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <item>
+                   <widget class="QWidget" name="widget_page_3_title" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(5, 50, 100, 0);</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="layout_page_3_title">
+                     <property name="spacing">
+                      <number>6</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_page_3_title">
+                       <property name="text">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#00ffff; font-family:'Segoe UI','Segoe UI','Arial','sans-serif';&quot;&gt;QUẢN LÝ ĐIỂM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_page_3_buttons" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(5, 50, 100, 90);</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="layout_page_3_buttons">
+                     <property name="spacing">
+                      <number>6</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_3_1view">
+                       <property name="font">
+                        <font>
+                         <family>Bahnschrift</family>
+                         <pointsize>-1</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;</string>
+                       </property>
+                       <property name="text">
+                        <string>Xem danh sách</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_3_2add">
+                       <property name="font">
+                        <font>
+                         <family>Bahnschrift</family>
+                         <pointsize>-1</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;</string>
+                       </property>
+                       <property name="text">
+                        <string>Thêm</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_3_3edit">
+                       <property name="font">
+                        <font>
+                         <family>Bahnschrift</family>
+                         <pointsize>-1</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;</string>
+                       </property>
+                       <property name="text">
+                        <string>Sửa</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_3_4delete">
+                       <property name="font">
+                        <font>
+                         <family>Bahnschrift</family>
+                         <pointsize>-1</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;</string>
+                       </property>
+                       <property name="text">
+                        <string>Xóa</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_4_doan">
+                <widget class="QFrame" name="frame_page_4_top">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1095</width>
+                   <height>80</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                  <property name="spacing">
+                   <number>1</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                  <item>
+                   <widget class="QWidget" name="widget_page_4_title" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(5, 50, 100, 0);</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="layout_page_4_title">
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="label_page_4_title">
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#00ffff; font-family:'Segoe UI','Segoe UI','Arial','sans-serif';&quot;&gt;QUẢN LÝ ĐỒ ÁN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_page_4_buttons" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgba(5, 50, 100, 90);</string>
+                    </property>
+                    <layout class="QHBoxLayout" name="layout_page_4_buttons">
+                     <property name="spacing">
+                      <number>6</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>1</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>1</number>
+                     </property>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_4_1view">
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Xem danh sách</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_4_2add">
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Thêm</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_4_3edit">
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Sửa</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_page_4_4delete">
+                       <property name="styleSheet">
+                        <string notr="true">/* Set color to white */
+color: white;
+
+/* Set font family to Bahnschrift */
+font-family: 'Bahnschrift', sans-serif;
+
+/* Set font size to 15 pixels */
+font-size: 20px;
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Xóa</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QFrame" name="frame_page_4_bottom">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>90</y>
+                   <width>1095</width>
+                   <height>571</height>
+                  </rect>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget_doan"/>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons/quanlySinhVien.qrc"/>
+ </resources>
+ <connections/>
+</ui>
