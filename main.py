@@ -46,20 +46,11 @@ class MainWindow:
 
         #Khai báo các nút hiện page
         self.uic2.pushButton_home.clicked.connect(self.fn_showpage_1_Home)
-        self.uic2.pushButton_sinhvien.clicked.connect(self.fn_showpage_2_QLSV)
-        self.uic2.pushButton_monhoc.clicked.connect(self.fn_showpage_3_QLMH)
-        self.uic2.pushButton_diemso.clicked.connect(self.fn_showpage_4_QLDS)
-
-    def fn_cloudConnect(self):
-        textID = self.uic.lineEdit_username.text()
-        textPASSWORD = self.uic.lineEdit_password.text()
-        if textID=='linhlan' and textPASSWORD=='2324':
-            self.uic.lineEdit_username.setText("")
-            self.uic.lineEdit_password.setText("")
-            self.fn_openMainWindow(textID)  # Open the main window if credentials are correct
-            self.login_win.close()
-        else:
-            self.fn_showError("Sai thông tin đăng nhập", "Tên đăng nhập hoặc mật khẩu không đúng. Xin hãy thử lại.")
+        self.uic2.pushButton_sinhvien.clicked.connect(self.fn_showpage_2_QLSinhVien)
+        self.uic2.pushButton_giangvien.clicked.connect(self.fn_showpage_3_QLGiangVien)
+        self.uic2.pushButton_lop.clicked.connect(self.fn_showpage_4_QLLop)
+        self.uic2.pushButton_khoa.clicked.connect(self.fn_showpage_5_QLKhoa)
+        self.uic2.pushButton_monhoc.clicked.connect(self.fn_showpage_6_QLMonHoc)
 
     def fn_forgotPassword(self):
         msg = QMessageBox()
@@ -96,22 +87,37 @@ class MainWindow:
 
     def fn_showpage_1_Home(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_1_Home)
-# Inside your method fn_showpage_2_QLSV and other similar methods:
-    def fn_showpage_2_QLSV(self):
-        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_2_QLSV)        
-        # Fetch data from the database for the current page
-        self.fetch_data_from_sql_server('SINHVIEN')
 
-    def fn_showpage_3_QLMH(self):
-        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_3_QLMH)
-        self.fetch_data_from_sql_server('MONHOC')
-    def fn_showpage_4_QLDS(self):
-        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLDS)
+    def fn_showpage_2_QLSinhVien(self):
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_2_QLSinhVien)   
+        self.fetch_data_from_sql_server('SINHVIEN')
+    def fn_showpage_3_QLGiangVien(self):
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_3_QLGiangVien)
         self.fetch_data_from_sql_server('GIANGVIEN')
+    def fn_showpage_4_QLLop(self):
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLLop)
+        self.fetch_data_from_sql_server('LOP')
+    def fn_showpage_5_QLKhoa(self):
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLKhoa)
+        self.fetch_data_from_sql_server('KHOA')
+    def fn_showpage_6_QLMonHoc(self):
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLMonHoc)
+        self.fetch_data_from_sql_server('MONHOC')
     def show(self):
         self.login_win.show()
 
     
+    def fn_cloudConnect(self):
+        textID = self.uic.lineEdit_username.text()
+        textPASSWORD = self.uic.lineEdit_password.text()
+        if textID=='linhlan' and textPASSWORD=='2324':
+            self.uic.lineEdit_username.setText("")
+            self.uic.lineEdit_password.setText("")
+            self.fn_openMainWindow(textID)  # Open the main window if credentials are correct
+            self.login_win.close()
+        else:
+            self.fn_showError("Sai thông tin đăng nhập", "Tên đăng nhập hoặc mật khẩu không đúng. Xin hãy thử lại.")
+
     def connect_to_database(self):
         try:
             # Establish a connection to SQL Server
@@ -138,11 +144,16 @@ class MainWindow:
 
                 # Display data in the table widget
                 if table_name == 'SINHVIEN':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLSV)
-                if table_name == 'MONHOC':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLMH)
+                    self.display_data_in_table(rows, self.uic2.tableWidget_QLSinhVien)
                 if table_name == 'GIANGVIEN':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLDS)
+                    self.display_data_in_table(rows, self.uic2.tableWidget_QLGiangVien)
+                if table_name == 'LOP':
+                    self.display_data_in_table(rows, self.uic2.tableWidget_QLLop)
+                if table_name == 'KHOA':
+                    self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
+                if table_name == 'MONHOC':
+                    self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
+
                 # Close cursor and connection
                 cursor.close()
                 conn.close()
