@@ -121,7 +121,7 @@ class MainWindow:
     def connect_to_database(self):
         try:
             # Establish a connection to SQL Server
-            conn = pyodbc.connect('DRIVER={SQL Server};SERVER=MKLAN;DATABASE=quanlySinhVien')
+            conn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};Server=DESKTOP-ROQFKMK;Database=quanlySinhVien;Trusted_Connection=yes')
 
             # Create a cursor
             cursor = conn.cursor()            

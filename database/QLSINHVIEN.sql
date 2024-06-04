@@ -5,7 +5,7 @@ IF EXISHV0001
 	SELECT * 
 	FROM   master..sysdatabases 
 	WHERE  name = N'QLSINHVIEN'
-) 
+)
 DROP DATABASE quanlySinhVien
 GO
 
