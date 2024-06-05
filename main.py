@@ -9,7 +9,10 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 from ui_login import Ui_windowUI_login
 from ui_main import Ui_windowUI_main
-from DatabaseQueries import fetch_data_from_sql_server
+#from DatabaseQueries import fetch_data_from_sql_server, verify_login
+#rows = fetch_data_from_sql_server('GIANGVIEN')
+import DatabaseQueries
+#rows = DatabaseQueries.fetch_data_from_sql_server('GIANGVIEN')
 
 class QuanLiSinhVien:
     def __init__(self):
@@ -17,37 +20,38 @@ class QuanLiSinhVien:
         self.uic = Ui_windowUI_login()
         self.uic.setupUi(self.login_win)
 
-        # Load saved credentials if they exist
+        # Mở file credentials và kiểm tra có thông tin đã lưu chưa
         self.load_saved_credentials()
 
-        #Khai báo các nút tác vụ
+        # Khai báo các nút tác vụ
         self.uic.pushButton_close.clicked.connect(self.login_win.close)
         self.uic.pushButton_max.clicked.connect(self.login_win.showMaximized)
         self.uic.pushButton_minimize.clicked.connect(self.login_win.showMinimized)
         
-        #Khai báo nút nhấn login ra màn hình thứ 2
+        # Khai báo nút nhấn login ra màn hình thứ 2
         #self.uic.pushButton_login.clicked.connect(self.fn_openMainWindow)
         self.uic.pushButton_login.clicked.connect(self.fn_cloudConnect)
 
         self.uic.pushButton_forgot.clicked.connect(self.fn_forgotPassword)
         self.uic.checkBox_remember.clicked.connect(self.fn_rememberPassword)
 
+    # Hàm hiển thị cửa sổ thứ hai khi đăng nhập thành công
     def fn_openMainWindow(self, textID):
-        #Lệnh mở màn hình thứ hai
+        # Lệnh mở màn hình thứ hai
         self.second_window = QtWidgets.QMainWindow()
         self.uic2 = Ui_windowUI_main()
         self.uic2.setupUi(self.second_window)
         self.second_window.show()
 
-        #Lấy thông tin người dùng đăng nhập
+        # Lấy thông tin người dùng đăng nhập, để tạo lời chào
         self.uic2.lab_user_2.setText(textID)
 
-        #Khai báo các nút tác vụ
+        # Khai báo các nút tác vụ
         self.uic2.pushButton_close.clicked.connect(self.second_window.close)
         self.uic2.pushButton_max.clicked.connect(self.second_window.showMaximized)
         self.uic2.pushButton_minimize.clicked.connect(self.second_window.showMinimized)
 
-        #Khai báo các nút hiện page
+        # Khai báo các nút hiện page
         self.uic2.pushButton_home.clicked.connect(self.fn_showpage_1_Home)
         self.uic2.pushButton_sinhvien.clicked.connect(self.fn_showpage_2_QLSinhVien)
         self.uic2.pushButton_giangvien.clicked.connect(self.fn_showpage_3_QLGiangVien)
@@ -89,48 +93,58 @@ class QuanLiSinhVien:
                 #self.uic.checkBox_remember.setChecked(True)
 
 
-
     def fn_showpage_1_Home(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_1_Home)
     def fn_showpage_2_QLSinhVien(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_2_QLSinhVien)   
-        rows = fetch_data_from_sql_server('SINHVIEN')
+        rows = DatabaseQueries.fetch_data_from_sql_server('SINHVIEN')
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLSinhVien)
     def fn_showpage_3_QLGiangVien(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_3_QLGiangVien)
-        rows = fetch_data_from_sql_server('GIANGVIEN')
+        rows = DatabaseQueries.fetch_data_from_sql_server('GIANGVIEN')
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLGiangVien)
     def fn_showpage_4_QLLop(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLLop)
-        rows = fetch_data_from_sql_server('LOP')
+        rows = DatabaseQueries.fetch_data_from_sql_server('LOP')
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLLop)
     def fn_showpage_5_QLKhoa(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_5_QLKhoa)
-        rows = fetch_data_from_sql_server('KHOA')
+        rows = DatabaseQueries.fetch_data_from_sql_server('KHOA')
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
     def fn_showpage_6_QLMonHoc(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_6_QLMonHoc)
-        rows = fetch_data_from_sql_server('MONHOC')
+        rows = DatabaseQueries.fetch_data_from_sql_server('MONHOC')
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
     def show(self):
         self.login_win.show()
 
-    
     def fn_cloudConnect(self):
         textID = self.uic.lineEdit_username.text()
         textPASSWORD = self.uic.lineEdit_password.text()
-        if textID=='linhlan' and textPASSWORD=='2324':
+        if textID == 'linhlan' and textPASSWORD == '2324' or DatabaseQueries.verify_login(textID, textPASSWORD, self.fn_showError):
             self.uic.lineEdit_username.setText("")
             self.uic.lineEdit_password.setText("")
-            self.fn_openMainWindow(textID)  
+            self.fn_openMainWindow(textID) # Hiển thị cửa sổ thứ hai khi thông tin tài khoản đúng
             self.login_win.close()
         else:
             self.fn_showError("Sai thông tin đăng nhập", "Tên đăng nhập hoặc mật khẩu không đúng. Xin hãy thử lại.")
+
+    # Tách file.DatabaseQueries.py
+    # def fn_cloudConnect(self):
+    #     textID = self.uic.lineEdit_username.text()
+    #     textPASSWORD = self.uic.lineEdit_password.text()
+    #     if textID=='linhlan' and textPASSWORD=='2324':
+    #         self.uic.lineEdit_username.setText("")
+    #         self.uic.lineEdit_password.setText("")
+    #         self.fn_openMainWindow(textID)  
+    #         self.login_win.close()
+    #     else:
+    #         self.fn_showError("Sai thông tin đăng nhập", "Tên đăng nhập hoặc mật khẩu không đúng. Xin hãy thử lại.")
 
     # def connect_to_database(self):
     #     try:
