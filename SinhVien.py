@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import pyodbc
-
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 class SinhVien(ABC):
     def __init__(self):
         self.conn = None
@@ -11,7 +12,7 @@ class SinhVien(ABC):
             # Chuỗi kết nối
             conn_str = (
                 'Driver={ODBC Driver 17 for SQL Server};'
-                'Server=DESKTOP-ROQFKMK;'
+                'Server=MKLAN;'
                 'Database=quanlySinhVien;'
                 'Trusted_Connection=yes;'
             )

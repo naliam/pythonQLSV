@@ -1,12 +1,15 @@
 import sys
 import os
-import pyodbc
 import configparser
 from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PyQt6 import QtWidgets
+
+import sqlite3
+sys.stdout.reconfigure(encoding='utf-8')
+
 from ui_login import Ui_windowUI_login
 from ui_main import Ui_windowUI_main
-import sqlite3
+from DatabaseQueries import fetch_data_from_sql_server
 
 class QuanLiSinhVien:
     def __init__(self):
@@ -60,6 +63,14 @@ class QuanLiSinhVien:
         msg.setStandardButtons(QMessageBox.StandardButton.Ok)
         msg.exec()
 
+    def fn_showError(self, title, message):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Icon.Critical)
+        msg.setWindowTitle(title)
+        msg.setText(message)
+        msg.setStandardButtons(QMessageBox.StandardButton.Retry)
+        msg.exec()
+
     def fn_rememberPassword(self):
         textID = self.uic.lineEdit_username.text()
         textPASSWORD = self.uic.lineEdit_password.text()
@@ -77,32 +88,35 @@ class QuanLiSinhVien:
                 self.uic.lineEdit_password.setText(config['CREDENTIALS']['password'])
                 #self.uic.checkBox_remember.setChecked(True)
 
-    def fn_showError(self, title, message):
-        msg = QMessageBox()
-        msg.setIcon(QMessageBox.Icon.Critical)
-        msg.setWindowTitle(title)
-        msg.setText(message)
-        msg.setStandardButtons(QMessageBox.StandardButton.Retry)
-        msg.exec()
+
 
     def fn_showpage_1_Home(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_1_Home)
-
     def fn_showpage_2_QLSinhVien(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_2_QLSinhVien)   
-        self.fetch_data_from_sql_server('SINHVIEN')
+        rows = fetch_data_from_sql_server('SINHVIEN')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLSinhVien)
     def fn_showpage_3_QLGiangVien(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_3_QLGiangVien)
-        self.fetch_data_from_sql_server('GIANGVIEN')
+        rows = fetch_data_from_sql_server('GIANGVIEN')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLGiangVien)
     def fn_showpage_4_QLLop(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLLop)
-        self.fetch_data_from_sql_server('LOP')
+        rows = fetch_data_from_sql_server('LOP')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLLop)
     def fn_showpage_5_QLKhoa(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_5_QLKhoa)
-        self.fetch_data_from_sql_server('KHOA')
+        rows = fetch_data_from_sql_server('KHOA')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
     def fn_showpage_6_QLMonHoc(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_6_QLMonHoc)
-        self.fetch_data_from_sql_server('MONHOC')
+        rows = fetch_data_from_sql_server('MONHOC')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
     def show(self):
         self.login_win.show()
 
@@ -113,52 +127,52 @@ class QuanLiSinhVien:
         if textID=='linhlan' and textPASSWORD=='2324':
             self.uic.lineEdit_username.setText("")
             self.uic.lineEdit_password.setText("")
-            self.fn_openMainWindow(textID)  # Open the main window if credentials are correct
+            self.fn_openMainWindow(textID)  
             self.login_win.close()
         else:
             self.fn_showError("Sai thông tin đăng nhập", "Tên đăng nhập hoặc mật khẩu không đúng. Xin hãy thử lại.")
 
-    def connect_to_database(self):
-        try:
-            # Establish a connection to SQL Server
-            conn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};Server=ADMIN-PC;Database=quanlySinhVien;Trusted_Connection=yes')
+    # def connect_to_database(self):
+    #     try:
+    #         # Establish a connection to SQL Server
+    #         conn = pyodbc.connect('DRIVER={SQL Server};SERVER=MKLAN;DATABASE=quanlySinhVien')
 
-            # Create a cursor
-            cursor = conn.cursor()            
-            return conn, cursor
-        except pyodbc.Error as e:
-            self.fn_showError("Database Error", f"Error accessing the database: {e}")
-            return None, None
+    #         # Create a cursor
+    #         cursor = conn.cursor()            
+    #         return conn, cursor
+    #     except pyodbc.Error as e:
+    #         self.fn_showError("Database Error", f"Error accessing the database: {e}")
+    #         return None, None
        
-    def fetch_data_from_sql_server(self, table_name):
-        # Connect to the database
-        conn, cursor = self.connect_to_database()
+    # def fetch_data_from_sql_server(self, table_name):
+    #     # Connect to the database
+    #     conn, cursor = self.connect_to_database()
         
-        if conn and cursor:
-            try:
-                # Execute a query to fetch data from the specified table
-                cursor.execute(f"SELECT * FROM {table_name}")
+    #     if conn and cursor:
+    #         try:
+    #             # Execute a query to fetch data from the specified table
+    #             cursor.execute(f"SELECT * FROM {table_name}")
 
-                # Fetch all rows
-                rows = cursor.fetchall()
+    #             # Fetch all rows
+    #             rows = cursor.fetchall()
 
-                # Display data in the table widget
-                if table_name == 'SINHVIEN':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLSinhVien)
-                if table_name == 'GIANGVIEN':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLGiangVien)
-                if table_name == 'LOP':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLLop)
-                if table_name == 'KHOA':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
-                if table_name == 'MONHOC':
-                    self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
+    #             # Display data in the table widget
+    #             if table_name == 'SINHVIEN':
+    #                 self.display_data_in_table(rows, self.uic2.tableWidget_QLSinhVien)
+    #             if table_name == 'GIANGVIEN':
+    #                 self.display_data_in_table(rows, self.uic2.tableWidget_QLGiangVien)
+    #             if table_name == 'LOP':
+    #                 self.display_data_in_table(rows, self.uic2.tableWidget_QLLop)
+    #             if table_name == 'KHOA':
+    #                 self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
+    #             if table_name == 'MONHOC':
+    #                 self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
 
-                # Close cursor and connection
-                cursor.close()
-                conn.close()
-            except pyodbc.Error as e:
-                self.fn_showError("Database Error", f"Error accessing the database: {e}")
+    #             # Close cursor and connection
+    #             cursor.close()
+    #             conn.close()
+    #         except pyodbc.Error as e:
+    #             self.fn_showError("Database Error", f"Error accessing the database: {e}")
 
     def display_data_in_table(self, data, table_widget):
         # Clear existing data in the table widget
