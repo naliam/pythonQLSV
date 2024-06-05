@@ -7,7 +7,7 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-
+from SinhVien import SinhVien
 
 class Ui_windowUI_main(object):
     def setupUi(self, windowUI_main):
@@ -1714,6 +1714,22 @@ class Ui_windowUI_main(object):
         self.pushButton_QLMH_details_delete_3.setText(_translate("windowUI_main", "Xoá"))
         self.tabWidget_QLMH_details.setTabText(self.tabWidget_QLMH_details.indexOf(self.tab_QLMH_details_3), _translate("windowUI_main", "Điểm số"))
 
+def main():
+    # Tạo một đối tượng SinhVien
+    sinh_vien_manager = SinhVien()
+
+    # Kết nối đến cơ sở dữ liệu
+    sinh_vien_manager.connect_to_database()
+
+    # Tìm kiếm sinh viên theo mã số sinh viên
+    ma_sinh_vien = input("Nhập mã số sinh viên cần tìm kiếm: ")
+    sinh_vien_info = sinh_vien_manager.tim_kiem_sinh_vien_theo_ma_sinh_vien(ma_sinh_vien)
+
+    if sinh_vien_info:
+        print("Thông tin sinh viên:")
+        print(sinh_vien_info)
+    else:
+        print("Không tìm thấy sinh viên có mã số sinh viên:", ma_sinh_vien)
 
 if __name__ == "__main__":
     import sys
@@ -1722,4 +1738,5 @@ if __name__ == "__main__":
     ui = Ui_windowUI_main()
     ui.setupUi(windowUI_main)
     windowUI_main.show()
+    main()
     sys.exit(app.exec())

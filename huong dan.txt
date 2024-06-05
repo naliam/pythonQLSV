@@ -14,7 +14,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from NewTest import Ui_MainWindow
 
-class MainWindow:
+class QuanLiSinhVien:
     def __init__(self):
         self.main_win = QMainWindow()
         self.uic = Ui_MainWindow()

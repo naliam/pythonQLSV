@@ -8,7 +8,7 @@ from ui_login import Ui_windowUI_login
 from ui_main import Ui_windowUI_main
 import sqlite3
 
-class MainWindow:
+class QuanLiSinhVien:
     def __init__(self):
         self.login_win = QMainWindow()
         self.uic = Ui_windowUI_login()
@@ -169,9 +169,10 @@ class MainWindow:
         for row_number, row_data in enumerate(data):
             table_widget.insertRow(row_number)
             for column_number, column_data in enumerate(row_data):
-                table_widget.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(str(column_data)))          
+                table_widget.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(str(column_data)))
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    login_win = MainWindow()
+    login_win = QuanLiSinhVien()
     login_win.show()
     sys.exit(app.exec())
