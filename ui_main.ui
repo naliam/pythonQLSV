@@ -2372,7 +2372,7 @@ QFrame#verticalFrame_QLLop_search_3{
                           </size>
                          </property>
                          <property name="currentIndex">
-                          <number>0</number>
+                          <number>2</number>
                          </property>
                          <widget class="QWidget" name="tab_1_QLLop">
                           <attribute name="title">
@@ -2798,13 +2798,13 @@ QFrame#verticalFrame_QLKhoa_search_3{
                           </size>
                          </property>
                          <property name="currentIndex">
-                          <number>0</number>
+                          <number>2</number>
                          </property>
                          <widget class="QWidget" name="tab_1_QLKhoa">
                           <attribute name="title">
                            <string>Thông tin cá nhân</string>
                           </attribute>
-                          <widget class="QFrame" name="gridFrame_QLMH_details_buttons_4">
+                          <widget class="QFrame" name="gridFrame_tab_1_QLKhoa_buttons">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -2821,28 +2821,28 @@ QFrame#verticalFrame_QLKhoa_search_3{
                            </property>
                            <layout class="QGridLayout" name="gridLayout_29">
                             <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_edit_4">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_edit">
                               <property name="text">
                                <string>Sửa</string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_view_4">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_view">
                               <property name="text">
                                <string>Xem </string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_add_4">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_add">
                               <property name="text">
                                <string>Thêm</string>
                               </property>
                              </widget>
                             </item>
                             <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_delete_4">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>
@@ -2855,7 +2855,7 @@ QFrame#verticalFrame_QLKhoa_search_3{
                           <attribute name="title">
                            <string>Thông tin môn học</string>
                           </attribute>
-                          <widget class="QFrame" name="gridFrame_QLMH_details_buttons_5">
+                          <widget class="QFrame" name="gridFrame_tab_2_QLKhoa_buttons">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -2872,28 +2872,28 @@ QFrame#verticalFrame_QLKhoa_search_3{
                            </property>
                            <layout class="QGridLayout" name="gridLayout_30">
                             <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_edit_5">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_edit">
                               <property name="text">
                                <string>Sửa</string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_view_5">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_view">
                               <property name="text">
                                <string>Xem </string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_add_5">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_add">
                               <property name="text">
                                <string>Thêm</string>
                               </property>
                              </widget>
                             </item>
                             <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_delete_5">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>
@@ -2906,7 +2906,7 @@ QFrame#verticalFrame_QLKhoa_search_3{
                           <attribute name="title">
                            <string>Điểm số</string>
                           </attribute>
-                          <widget class="QFrame" name="gridFrame_QLMH_details_buttons_6">
+                          <widget class="QFrame" name="gridFrame_tab_3_QLKhoa_buttons">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -2923,28 +2923,28 @@ QFrame#verticalFrame_QLKhoa_search_3{
                            </property>
                            <layout class="QGridLayout" name="gridLayout_31">
                             <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_edit_6">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_edit">
                               <property name="text">
                                <string>Sửa</string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_view_6">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_view">
                               <property name="text">
                                <string>Xem </string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_add_6">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_add">
                               <property name="text">
                                <string>Thêm</string>
                               </property>
                              </widget>
                             </item>
                             <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_delete_6">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>
@@ -3021,10 +3021,10 @@ QFrame#verticalFrame_QLMH_search_3{
                  </property>
                  <layout class="QGridLayout" name="gridLayout">
                   <item row="0" column="0">
-                   <widget class="QFrame" name="verticalFrame_QLMH_search">
+                   <widget class="QFrame" name="verticalFrame_QLMonHoc_search">
                     <layout class="QVBoxLayout" name="verticalLayout_2">
                      <item>
-                      <widget class="QLabel" name="label_QLMH">
+                      <widget class="QLabel" name="label_QLMonHoc">
                        <property name="maximumSize">
                         <size>
                          <width>16777215</width>
@@ -3037,19 +3037,19 @@ QFrame#verticalFrame_QLMH_search_3{
                       </widget>
                      </item>
                      <item>
-                      <widget class="QGroupBox" name="groupBox_QLMH_search">
+                      <widget class="QGroupBox" name="groupBox_QLMonHoc_search">
                        <property name="title">
                         <string>Tìm kiếm</string>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_40">
                         <item>
-                         <widget class="QFrame" name="horizontalFrame_QLMH_search">
+                         <widget class="QFrame" name="horizontalFrame_QLMonHoc_search">
                           <property name="styleSheet">
                            <string notr="true"/>
                           </property>
                           <layout class="QHBoxLayout" name="horizontalLayout_28">
                            <item>
-                            <widget class="QFrame" name="verticalFrame_QLMH_search_1">
+                            <widget class="QFrame" name="verticalFrame_QLMonHoc_search_1">
                              <property name="minimumSize">
                               <size>
                                <width>130</width>
@@ -3061,7 +3061,7 @@ QFrame#verticalFrame_QLMH_search_3{
                              </property>
                              <layout class="QVBoxLayout" name="verticalLayout_62">
                               <item>
-                               <widget class="QLabel" name="label_1_QLMH_search_1">
+                               <widget class="QLabel" name="label_1_QLMonHoc_search_1">
                                 <property name="minimumSize">
                                  <size>
                                   <width>0</width>
@@ -3077,7 +3077,7 @@ QFrame#verticalFrame_QLMH_search_3{
                                </widget>
                               </item>
                               <item>
-                               <widget class="QLabel" name="label_2_QLMH_search_1">
+                               <widget class="QLabel" name="label_2_QLMonHoc_search_1">
                                 <property name="text">
                                  <string>Tên môn học</string>
                                 </property>
@@ -3087,19 +3087,19 @@ QFrame#verticalFrame_QLMH_search_3{
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="verticalFrame_QLMH_search_2">
+                            <widget class="QFrame" name="verticalFrame_QLMonHoc_search_2">
                              <layout class="QVBoxLayout" name="verticalLayout_63">
                               <item>
-                               <widget class="QLineEdit" name="lineEdit_QLMH_search_2_maso"/>
+                               <widget class="QLineEdit" name="lineEdit_QLMonHoc_search_2_maso"/>
                               </item>
                               <item>
-                               <widget class="QLineEdit" name="lineEdit_QLMH_search_2_hoten"/>
+                               <widget class="QLineEdit" name="lineEdit_QLMonHoc_search_2_hoten"/>
                               </item>
                              </layout>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QFrame" name="verticalFrame_QLMH_search_3">
+                            <widget class="QFrame" name="verticalFrame_QLMonHoc_search_3">
                              <property name="minimumSize">
                               <size>
                                <width>140</width>
@@ -3111,14 +3111,14 @@ QFrame#verticalFrame_QLMH_search_3{
                              </property>
                              <layout class="QVBoxLayout" name="verticalLayout_64">
                               <item>
-                               <widget class="QPushButton" name="pushButton_QLMH_search_3_timkiem">
+                               <widget class="QPushButton" name="pushButton_QLMonHoc_search_3_timkiem">
                                 <property name="text">
                                  <string>Tìm kiếm</string>
                                 </property>
                                </widget>
                               </item>
                               <item>
-                               <widget class="QPushButton" name="pushButton_QLMH_search_3_lammoi">
+                               <widget class="QPushButton" name="pushButton_QLMonHoc_search_3_lammoi">
                                 <property name="text">
                                  <string>Làm mới</string>
                                 </property>
@@ -3137,7 +3137,7 @@ QFrame#verticalFrame_QLMH_search_3{
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QFrame" name="verticalFrame_QLMH_content">
+                   <widget class="QFrame" name="verticalFrame_QLMonHoc_content">
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
@@ -3146,7 +3146,7 @@ QFrame#verticalFrame_QLMH_search_3{
                     </property>
                     <layout class="QVBoxLayout" name="d_2">
                      <item>
-                      <widget class="QTableWidget" name="tableWidget_QLMH">
+                      <widget class="QTableWidget" name="tableWidget_QLMonHoc">
                        <property name="rowCount">
                         <number>15</number>
                        </property>
@@ -3197,7 +3197,7 @@ QFrame#verticalFrame_QLMH_search_3{
                    </widget>
                   </item>
                   <item row="0" column="1" rowspan="2">
-                   <widget class="QFrame" name="horizontalFrame_QLMH_details">
+                   <widget class="QFrame" name="horizontalFrame_QLMonHoc_details">
                     <property name="maximumSize">
                      <size>
                       <width>350</width>
@@ -3206,9 +3206,9 @@ QFrame#verticalFrame_QLMH_search_3{
                     </property>
                     <layout class="QHBoxLayout" name="A">
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_QLMH_details">
+                      <layout class="QVBoxLayout" name="verticalLayout_QLMonHoc_details">
                        <item>
-                        <widget class="QLabel" name="label_QLMH_details">
+                        <widget class="QLabel" name="label_QLMonHoc_details">
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -3221,7 +3221,7 @@ QFrame#verticalFrame_QLMH_search_3{
                         </widget>
                        </item>
                        <item>
-                        <widget class="QTabWidget" name="tabWidget_QLMH_details">
+                        <widget class="QTabWidget" name="tabWidget_QLMonHoc_details">
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -3229,13 +3229,13 @@ QFrame#verticalFrame_QLMH_search_3{
                           </size>
                          </property>
                          <property name="currentIndex">
-                          <number>0</number>
+                          <number>2</number>
                          </property>
-                         <widget class="QWidget" name="tab_QLMH_details_1">
+                         <widget class="QWidget" name="tab_1_QLMonHoc">
                           <attribute name="title">
                            <string>Thông tin cá nhân</string>
                           </attribute>
-                          <widget class="QFrame" name="gridFrame_QLMH_details_buttons_1">
+                          <widget class="QFrame" name="gridFrame_tab_1_QLMonHoc_buttons">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -3252,28 +3252,28 @@ QFrame#verticalFrame_QLMH_search_3{
                            </property>
                            <layout class="QGridLayout" name="gridLayout_23">
                             <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_edit_1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLMonHoc_edit">
                               <property name="text">
                                <string>Sửa</string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_view_1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLMonHoc_view">
                               <property name="text">
                                <string>Xem </string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_add_1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLMonHoc_add">
                               <property name="text">
                                <string>Thêm</string>
                               </property>
                              </widget>
                             </item>
                             <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_delete_1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLMonHoc_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>
@@ -3282,11 +3282,11 @@ QFrame#verticalFrame_QLMH_search_3{
                            </layout>
                           </widget>
                          </widget>
-                         <widget class="QWidget" name="tab_QLMH_details_2">
+                         <widget class="QWidget" name="tab_2_QLMonHoc">
                           <attribute name="title">
                            <string>Thông tin môn học</string>
                           </attribute>
-                          <widget class="QFrame" name="gridFrame_QLMH_details_buttons_2">
+                          <widget class="QFrame" name="gridFrame_tab_2_QLMonHoc_buttons">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -3303,28 +3303,28 @@ QFrame#verticalFrame_QLMH_search_3{
                            </property>
                            <layout class="QGridLayout" name="gridLayout_24">
                             <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_edit_2">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLMonHoc_edit">
                               <property name="text">
                                <string>Sửa</string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_view_2">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLMonHoc_view">
                               <property name="text">
                                <string>Xem </string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_add_2">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLMonHoc_add">
                               <property name="text">
                                <string>Thêm</string>
                               </property>
                              </widget>
                             </item>
                             <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_delete_2">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLMonHoc_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>
@@ -3333,11 +3333,11 @@ QFrame#verticalFrame_QLMH_search_3{
                            </layout>
                           </widget>
                          </widget>
-                         <widget class="QWidget" name="tab_QLMH_details_3">
+                         <widget class="QWidget" name="tab_3_QLMonHoc">
                           <attribute name="title">
                            <string>Điểm số</string>
                           </attribute>
-                          <widget class="QFrame" name="gridFrame_QLMH_details_buttons_3">
+                          <widget class="QFrame" name="gridFrame_tab_3_QLMonHoc_buttons">
                            <property name="geometry">
                             <rect>
                              <x>0</x>
@@ -3354,28 +3354,28 @@ QFrame#verticalFrame_QLMH_search_3{
                            </property>
                            <layout class="QGridLayout" name="gridLayout_25">
                             <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_edit_3">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLMonHoc_edit">
                               <property name="text">
                                <string>Sửa</string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_view_3">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLMonHoc_view">
                               <property name="text">
                                <string>Xem </string>
                               </property>
                              </widget>
                             </item>
                             <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_add_3">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLMonHoc_add">
                               <property name="text">
                                <string>Thêm</string>
                               </property>
                              </widget>
                             </item>
                             <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_QLMH_details_delete_3">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLMonHoc_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>

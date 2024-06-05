@@ -98,10 +98,10 @@ class QuanLiSinhVien:
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLLop)
         self.fetch_data_from_sql_server('LOP')
     def fn_showpage_5_QLKhoa(self):
-        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLKhoa)
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_5_QLKhoa)
         self.fetch_data_from_sql_server('KHOA')
     def fn_showpage_6_QLMonHoc(self):
-        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_4_QLMonHoc)
+        self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_6_QLMonHoc)
         self.fetch_data_from_sql_server('MONHOC')
     def show(self):
         self.login_win.show()
@@ -121,7 +121,7 @@ class QuanLiSinhVien:
     def connect_to_database(self):
         try:
             # Establish a connection to SQL Server
-            conn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};Server=DESKTOP-ROQFKMK;Database=quanlySinhVien;Trusted_Connection=yes')
+            conn = pyodbc.connect('Driver={ODBC Driver 17 for SQL Server};Server=ADMIN-PC;Database=quanlySinhVien;Trusted_Connection=yes')
 
             # Create a cursor
             cursor = conn.cursor()            
