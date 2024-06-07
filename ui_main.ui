@@ -73,7 +73,7 @@ QStackedWidget#stackedWidget{
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>60</height>
+        <height>45</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -286,12 +286,27 @@ QPushButton:pressed {
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
+             <item alignment="Qt::AlignTop">
               <widget class="QPushButton" name="pushButton_minimize">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>55</width>
                  <height>55</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
                 </size>
                </property>
                <property name="toolTip">
@@ -353,12 +368,27 @@ QPushButton:pressed {
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
+             <item alignment="Qt::AlignTop">
               <widget class="QPushButton" name="pushButton_max">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>55</width>
                  <height>55</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
                 </size>
                </property>
                <property name="toolTip">
@@ -420,7 +450,7 @@ QPushButton:pressed {
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
+             <item alignment="Qt::AlignTop">
               <widget class="QPushButton" name="pushButton_close">
                <property name="maximumSize">
                 <size>
@@ -742,7 +772,7 @@ QPushButton:pressed {
               </size>
              </property>
              <property name="toolTip">
-              <string>Quản lý môn học</string>
+              <string>Quản lý giảng viên</string>
              </property>
              <property name="styleSheet">
               <string notr="true"/>
@@ -821,7 +851,7 @@ QPushButton:pressed {
               </size>
              </property>
              <property name="toolTip">
-              <string>Quản lý điểm số</string>
+              <string>Quản lý lớp</string>
              </property>
              <property name="styleSheet">
               <string notr="true"/>
@@ -886,7 +916,7 @@ QPushButton:pressed {
             <number>0</number>
            </property>
            <item>
-            <widget class="QPushButton" name="pushButton_khoa">
+            <widget class="QPushButton" name="pushButton_monhoc">
              <property name="minimumSize">
               <size>
                <width>150</width>
@@ -900,13 +930,13 @@ QPushButton:pressed {
               </size>
              </property>
              <property name="toolTip">
-              <string>Quản lý điểm số</string>
+              <string>Quản lý môn học</string>
              </property>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
              <property name="text">
-              <string>Khoa</string>
+              <string>Môn học</string>
              </property>
              <property name="iconSize">
               <size>
@@ -965,7 +995,7 @@ QPushButton:pressed {
             <number>0</number>
            </property>
            <item>
-            <widget class="QPushButton" name="pushButton_monhoc">
+            <widget class="QPushButton" name="pushButton_khoa">
              <property name="minimumSize">
               <size>
                <width>150</width>
@@ -979,13 +1009,13 @@ QPushButton:pressed {
               </size>
              </property>
              <property name="toolTip">
-              <string>Quản lý điểm số</string>
+              <string>Quản lý khoa</string>
              </property>
              <property name="styleSheet">
               <string notr="true"/>
              </property>
              <property name="text">
-              <string>Môn học</string>
+              <string>Khoa</string>
              </property>
              <property name="iconSize">
               <size>
@@ -1204,7 +1234,7 @@ QLineEdit{
 	max-height: 30px;
 	border-radius: 20px;
 	padding-left: 20px;
-	color: rgb(0, 0, 255);
+	color: rgb(0, 0, 0);
 }
 QLineEdit:hover{
 	border: 2px solid rgb(139, 142, 139);
@@ -1263,7 +1293,7 @@ background-color: rgba(0, 0, 0, 0);
                         <number>15</number>
                        </property>
                        <property name="columnCount">
-                        <number>10</number>
+                        <number>12</number>
                        </property>
                        <attribute name="horizontalHeaderMinimumSectionSize">
                         <number>40</number>
@@ -1292,6 +1322,11 @@ background-color: rgba(0, 0, 0, 0);
                        <row/>
                        <row/>
                        <row/>
+                       <column>
+                        <property name="text">
+                         <string>Mã sinh viên</string>
+                        </property>
+                       </column>
                        <column>
                         <property name="text">
                          <string>Họ tên</string>
@@ -1335,6 +1370,11 @@ background-color: rgba(0, 0, 0, 0);
                        <column>
                         <property name="text">
                          <string>Họ tên mẹ</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Nghề nghiệp mẹ</string>
                         </property>
                        </column>
                        <column>
@@ -1469,7 +1509,7 @@ background-color: rgba(0, 0, 0, 0);
                             <property name="bottomMargin">
                              <number>10</number>
                             </property>
-                            <item row="0" column="0">
+                            <item row="1" column="0">
                              <widget class="QLabel" name="label_SinhVien_hoten">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1479,10 +1519,10 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="0" column="1">
+                            <item row="1" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_hoten"/>
                             </item>
-                            <item row="1" column="0">
+                            <item row="2" column="0">
                              <widget class="QLabel" name="label_SinhVien_gioitinh">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1492,7 +1532,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="1" column="1">
+                            <item row="2" column="1">
                              <widget class="QComboBox" name="comboBox_SinhVien_gioitinh">
                               <property name="maximumSize">
                                <size>
@@ -1502,7 +1542,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="2" column="0">
+                            <item row="3" column="0">
                              <widget class="QLabel" name="label_SinhVien_ngaysinh">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1512,10 +1552,10 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="2" column="1">
+                            <item row="3" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_ngaysinh"/>
                             </item>
-                            <item row="3" column="0">
+                            <item row="4" column="0">
                              <widget class="QLabel" name="label_SinhVien_noisinh">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1525,10 +1565,10 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="3" column="1">
+                            <item row="4" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_noisinh"/>
                             </item>
-                            <item row="4" column="0">
+                            <item row="5" column="0">
                              <widget class="QLabel" name="label_SinhVien_madantoc">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1538,7 +1578,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="5" column="0">
+                            <item row="6" column="0">
                              <widget class="QLabel" name="label_SinhVien_matongiao">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1548,7 +1588,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="6" column="0">
+                            <item row="7" column="0">
                              <widget class="QLabel" name="label_SinhVien_hotencha">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1558,7 +1598,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="7" column="0">
+                            <item row="8" column="0">
                              <widget class="QLabel" name="label_SinhVien_nghenghiepcha">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1568,7 +1608,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="8" column="0">
+                            <item row="9" column="0">
                              <widget class="QLabel" name="label_SinhVien_hotenme">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1578,7 +1618,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="9" column="0">
+                            <item row="10" column="0">
                              <widget class="QLabel" name="label_SinhVien_nghenghiepme">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1588,7 +1628,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="10" column="0">
+                            <item row="11" column="0">
                              <widget class="QLabel" name="label_SinhVien_dienthoai">
                               <property name="styleSheet">
                                <string notr="true"/>
@@ -1598,22 +1638,22 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="6" column="1">
+                            <item row="7" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_hotencha"/>
                             </item>
-                            <item row="7" column="1">
+                            <item row="8" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_nghenghiepcha"/>
                             </item>
-                            <item row="8" column="1">
+                            <item row="9" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_hotenme"/>
                             </item>
-                            <item row="9" column="1">
+                            <item row="10" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_nghenghiepme"/>
                             </item>
-                            <item row="10" column="1">
+                            <item row="11" column="1">
                              <widget class="QLineEdit" name="lineEdit_SinhVien_dienthoai"/>
                             </item>
-                            <item row="4" column="1">
+                            <item row="5" column="1">
                              <widget class="QComboBox" name="comboBox_SinhVien_madantoc">
                               <property name="maximumSize">
                                <size>
@@ -1623,7 +1663,7 @@ background-color: rgba(0, 0, 0, 0);
                               </property>
                              </widget>
                             </item>
-                            <item row="5" column="1">
+                            <item row="6" column="1">
                              <widget class="QComboBox" name="comboBox_SinhVien_matongiao">
                               <property name="maximumSize">
                                <size>
@@ -1632,6 +1672,16 @@ background-color: rgba(0, 0, 0, 0);
                                </size>
                               </property>
                              </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_SinhVien_masinhvien">
+                              <property name="text">
+                               <string>Mã sinh viên</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_masinhvien"/>
                             </item>
                            </layout>
                           </widget>
@@ -3022,510 +3072,10 @@ background-color: rgba(0, 0, 0, 0);
                  </layout>
                 </widget>
                </widget>
-               <widget class="QWidget" name="page_5_QLKhoa">
-                <property name="styleSheet">
-                 <string notr="true">QLineEdit#lineEdit_QLKhoa_search_2_maso{
-	min-height: 30px;
-	border-radius: 15px;
-	background-color: rgba(255, 255, 255, 0.9);
-	padding-left: 20px;
-	color: blue;
-}
-QLineEdit#lineEdit_QLKhoa_search_2_hoten{
-	min-height: 30px;
-	border-radius: 15px;
-	background-color: rgba(255, 255, 255, 0.9);
-	padding-left: 20px;
-	color: blue;
-}
-QLineEdit{
-	min-height: 30px;
-	max-height: 30px;
-	border-radius: 20px;
-	padding-left: 20px;
-	color: blue;
-}
-QLineEdit:hover{
-	border: 2px solid rgb(139, 142, 139);
-}
-QLabel#label_QLKhoa{
-    color: #55ffff;
-    font-size: 32px;
-    text-align: center;
-    font-weight: bold;
-}
-QLabel{
-	background-color: rgba(0, 0, 0, 0);
-    color: #55ffff;
-    font-size: 20px;
-	font-weight: bold;
-}
-
-QGroupBox{
-background-color: rgba(0, 0, 0, 0);
-}
-QTableWidget{
-background-color: rgba(0, 0, 0, 0);
-}
-QFrame#formFrame_Khoa{
-background-color: rgba(0, 0, 0, 0);
-}</string>
+               <widget class="QWidget" name="page_5_QLMonHoc">
+                <property name="toolTip">
+                 <string/>
                 </property>
-                <widget class="QFrame" name="gridFrame_QLKhoa">
-                 <property name="geometry">
-                  <rect>
-                   <x>0</x>
-                   <y>0</y>
-                   <width>1181</width>
-                   <height>671</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_2">
-                  <item row="0" column="0">
-                   <widget class="QFrame" name="verticalFrame_QLKhoa_search">
-                    <layout class="QVBoxLayout" name="verticalLayout_4">
-                     <item>
-                      <widget class="QLabel" name="label_QLKhoa_2">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>45</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#55ffff;&quot;&gt;QUẢN LÝ KHOA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QGroupBox" name="groupBox_QLKhoa_search">
-                       <property name="title">
-                        <string>Tìm kiếm</string>
-                       </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_42">
-                        <item>
-                         <widget class="QFrame" name="horizontalFrame_QLKhoa_search">
-                          <property name="styleSheet">
-                           <string notr="true"/>
-                          </property>
-                          <layout class="QHBoxLayout" name="horizontalLayout_30">
-                           <item>
-                            <widget class="QFrame" name="verticalFrame_QLKhoa_search_1">
-                             <property name="minimumSize">
-                              <size>
-                               <width>130</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true"/>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_68">
-                              <item>
-                               <widget class="QLabel" name="label_1_QLKhoa_search_1">
-                                <property name="minimumSize">
-                                 <size>
-                                  <width>0</width>
-                                  <height>0</height>
-                                 </size>
-                                </property>
-                                <property name="styleSheet">
-                                 <string notr="true"/>
-                                </property>
-                                <property name="text">
-                                 <string>Mã số khoa</string>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QLabel" name="label_2_QLKhoa_search_1">
-                                <property name="text">
-                                 <string>Tên khoa</string>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="verticalFrame_QLKhoa_search_2">
-                             <layout class="QVBoxLayout" name="verticalLayout_69">
-                              <item>
-                               <widget class="QLineEdit" name="lineEdit_QLKhoa_search_2_maso"/>
-                              </item>
-                              <item>
-                               <widget class="QLineEdit" name="lineEdit_QLKhoa_search_2_hoten"/>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                           <item>
-                            <widget class="QFrame" name="verticalFrame_QLKhoa_search_3">
-                             <property name="minimumSize">
-                              <size>
-                               <width>140</width>
-                               <height>0</height>
-                              </size>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true"/>
-                             </property>
-                             <layout class="QVBoxLayout" name="verticalLayout_70">
-                              <item>
-                               <widget class="QPushButton" name="pushButton_QLKhoa_search_3_timkiem">
-                                <property name="text">
-                                 <string>Tìm kiếm</string>
-                                </property>
-                               </widget>
-                              </item>
-                              <item>
-                               <widget class="QPushButton" name="pushButton_QLKhoa_search_3_lammoi">
-                                <property name="text">
-                                 <string>Làm mới</string>
-                                </property>
-                               </widget>
-                              </item>
-                             </layout>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QFrame" name="verticalFrame_QLKhoa_content">
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>475</height>
-                     </size>
-                    </property>
-                    <layout class="QVBoxLayout" name="d_3">
-                     <item>
-                      <widget class="QTableWidget" name="tableWidget_QLKhoa">
-                       <property name="rowCount">
-                        <number>15</number>
-                       </property>
-                       <property name="columnCount">
-                        <number>3</number>
-                       </property>
-                       <attribute name="horizontalHeaderDefaultSectionSize">
-                        <number>250</number>
-                       </attribute>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <row/>
-                       <column>
-                        <property name="text">
-                         <string>Mã khoa</string>
-                        </property>
-                       </column>
-                       <column>
-                        <property name="text">
-                         <string>Tên khoa</string>
-                        </property>
-                       </column>
-                       <column>
-                        <property name="text">
-                         <string>Số điện thoại</string>
-                        </property>
-                       </column>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item row="0" column="1" rowspan="2">
-                   <widget class="QFrame" name="horizontalFrame_QLKhoa_details">
-                    <property name="maximumSize">
-                     <size>
-                      <width>350</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <layout class="QHBoxLayout" name="A_2">
-                     <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_QLKhoa_details">
-                       <item>
-                        <widget class="QLabel" name="label_QLKhoa_details">
-                         <property name="maximumSize">
-                          <size>
-                           <width>16777215</width>
-                           <height>45</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string>THÔNG TIN CHI TIẾT</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QTabWidget" name="tabWidget_QLKhoa_details">
-                         <property name="maximumSize">
-                          <size>
-                           <width>16777215</width>
-                           <height>615</height>
-                          </size>
-                         </property>
-                         <property name="currentIndex">
-                          <number>0</number>
-                         </property>
-                         <widget class="QWidget" name="tab_1_QLKhoa">
-                          <attribute name="title">
-                           <string>Thông tin khoa</string>
-                          </attribute>
-                          <widget class="QFrame" name="gridFrame_tab_1_QLKhoa_buttons">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>510</y>
-                             <width>324</width>
-                             <height>68</height>
-                            </rect>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>16777215</width>
-                             <height>68</height>
-                            </size>
-                           </property>
-                           <layout class="QGridLayout" name="gridLayout_29">
-                            <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_edit">
-                              <property name="text">
-                               <string>Sửa</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_view">
-                              <property name="text">
-                               <string>Xem </string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_add">
-                              <property name="text">
-                               <string>Thêm</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_delete">
-                              <property name="text">
-                               <string>Xoá</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                          <widget class="QFrame" name="formFrame_Khoa">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>0</y>
-                             <width>331</width>
-                             <height>511</height>
-                            </rect>
-                           </property>
-                           <layout class="QFormLayout" name="formLayout_Khoa">
-                            <property name="horizontalSpacing">
-                             <number>10</number>
-                            </property>
-                            <property name="verticalSpacing">
-                             <number>10</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>10</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>10</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>20</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>10</number>
-                            </property>
-                            <item row="2" column="0">
-                             <widget class="QLabel" name="label_Khoa_sodienthoai">
-                              <property name="styleSheet">
-                               <string notr="true"/>
-                              </property>
-                              <property name="text">
-                               <string>Số điện thoại</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="0">
-                             <widget class="QLabel" name="label_Khoa_makhoa">
-                              <property name="styleSheet">
-                               <string notr="true"/>
-                              </property>
-                              <property name="text">
-                               <string>Mã khoa</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="1" column="0">
-                             <widget class="QLabel" name="label_Khoa_tenkhoa">
-                              <property name="styleSheet">
-                               <string notr="true"/>
-                              </property>
-                              <property name="text">
-                               <string>Tên khoa</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="1">
-                             <widget class="QLineEdit" name="lineEdit_Khoa_makhoa"/>
-                            </item>
-                            <item row="1" column="1">
-                             <widget class="QLineEdit" name="lineEdit_Khoa_tenkhoa"/>
-                            </item>
-                            <item row="2" column="1">
-                             <widget class="QLineEdit" name="lineEdit_Khoa_sodienthoai"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </widget>
-                         <widget class="QWidget" name="tab_2_QLKhoa">
-                          <attribute name="title">
-                           <string>Thông tin môn học</string>
-                          </attribute>
-                          <widget class="QFrame" name="gridFrame_tab_2_QLKhoa_buttons">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>510</y>
-                             <width>324</width>
-                             <height>68</height>
-                            </rect>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>16777215</width>
-                             <height>68</height>
-                            </size>
-                           </property>
-                           <layout class="QGridLayout" name="gridLayout_30">
-                            <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_edit">
-                              <property name="text">
-                               <string>Sửa</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_view">
-                              <property name="text">
-                               <string>Xem </string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_add">
-                              <property name="text">
-                               <string>Thêm</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_delete">
-                              <property name="text">
-                               <string>Xoá</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </widget>
-                         <widget class="QWidget" name="tab_3_QLKhoa">
-                          <attribute name="title">
-                           <string>Điểm số</string>
-                          </attribute>
-                          <widget class="QFrame" name="gridFrame_tab_3_QLKhoa_buttons">
-                           <property name="geometry">
-                            <rect>
-                             <x>0</x>
-                             <y>510</y>
-                             <width>324</width>
-                             <height>68</height>
-                            </rect>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>16777215</width>
-                             <height>68</height>
-                            </size>
-                           </property>
-                           <layout class="QGridLayout" name="gridLayout_31">
-                            <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_edit">
-                              <property name="text">
-                               <string>Sửa</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_view">
-                              <property name="text">
-                               <string>Xem </string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="0" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_add">
-                              <property name="text">
-                               <string>Thêm</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_delete">
-                              <property name="text">
-                               <string>Xoá</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </widget>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </widget>
-               <widget class="QWidget" name="page_6_QLMonHoc">
                 <property name="styleSheet">
                  <string notr="true">QLineEdit#lineEdit_QLMonHoc_search_2_maso{
 	min-height: 30px;
@@ -4035,6 +3585,512 @@ background-color: rgba(0, 0, 0, 0);
                             </item>
                             <item row="1" column="1">
                              <widget class="QPushButton" name="pushButton_tab_3_QLMonHoc_delete">
+                              <property name="text">
+                               <string>Xoá</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_6_QLKhoa">
+                <property name="toolTip">
+                 <string>Quản lý giảng viên</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit#lineEdit_QLKhoa_search_2_maso{
+	min-height: 30px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit#lineEdit_QLKhoa_search_2_hoten{
+	min-height: 30px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit{
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 20px;
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit:hover{
+	border: 2px solid rgb(139, 142, 139);
+}
+QLabel#label_QLKhoa{
+    color: #55ffff;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+QLabel{
+	background-color: rgba(0, 0, 0, 0);
+    color: #55ffff;
+    font-size: 20px;
+	font-weight: bold;
+}
+
+QGroupBox{
+background-color: rgba(0, 0, 0, 0);
+}
+QTableWidget{
+background-color: rgba(0, 0, 0, 0);
+}
+QFrame#formFrame_Khoa{
+background-color: rgba(0, 0, 0, 0);
+}</string>
+                </property>
+                <widget class="QFrame" name="gridFrame_QLKhoa">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1181</width>
+                   <height>671</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="0" column="0">
+                   <widget class="QFrame" name="verticalFrame_QLKhoa_search">
+                    <layout class="QVBoxLayout" name="verticalLayout_4">
+                     <item>
+                      <widget class="QLabel" name="label_QLKhoa_2">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; color:#55ffff;&quot;&gt;QUẢN LÝ KHOA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QGroupBox" name="groupBox_QLKhoa_search">
+                       <property name="title">
+                        <string>Tìm kiếm</string>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_42">
+                        <item>
+                         <widget class="QFrame" name="horizontalFrame_QLKhoa_search">
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <layout class="QHBoxLayout" name="horizontalLayout_30">
+                           <item>
+                            <widget class="QFrame" name="verticalFrame_QLKhoa_search_1">
+                             <property name="minimumSize">
+                              <size>
+                               <width>130</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true"/>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_68">
+                              <item>
+                               <widget class="QLabel" name="label_1_QLKhoa_search_1">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>0</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true"/>
+                                </property>
+                                <property name="text">
+                                 <string>Mã số khoa</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="label_2_QLKhoa_search_1">
+                                <property name="text">
+                                 <string>Tên khoa</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="verticalFrame_QLKhoa_search_2">
+                             <layout class="QVBoxLayout" name="verticalLayout_69">
+                              <item>
+                               <widget class="QLineEdit" name="lineEdit_QLKhoa_search_2_maso"/>
+                              </item>
+                              <item>
+                               <widget class="QLineEdit" name="lineEdit_QLKhoa_search_2_hoten"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="verticalFrame_QLKhoa_search_3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>140</width>
+                               <height>0</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true"/>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_70">
+                              <item>
+                               <widget class="QPushButton" name="pushButton_QLKhoa_search_3_timkiem">
+                                <property name="text">
+                                 <string>Tìm kiếm</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPushButton" name="pushButton_QLKhoa_search_3_lammoi">
+                                <property name="text">
+                                 <string>Làm mới</string>
+                                </property>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QFrame" name="verticalFrame_QLKhoa_content">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>475</height>
+                     </size>
+                    </property>
+                    <layout class="QVBoxLayout" name="d_3">
+                     <item>
+                      <widget class="QTableWidget" name="tableWidget_QLKhoa">
+                       <property name="rowCount">
+                        <number>15</number>
+                       </property>
+                       <property name="columnCount">
+                        <number>3</number>
+                       </property>
+                       <attribute name="horizontalHeaderDefaultSectionSize">
+                        <number>250</number>
+                       </attribute>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <row/>
+                       <column>
+                        <property name="text">
+                         <string>Mã khoa</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Tên khoa</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Số điện thoại</string>
+                        </property>
+                       </column>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="1" rowspan="2">
+                   <widget class="QFrame" name="horizontalFrame_QLKhoa_details">
+                    <property name="maximumSize">
+                     <size>
+                      <width>350</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <layout class="QHBoxLayout" name="A_2">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_QLKhoa_details">
+                       <item>
+                        <widget class="QLabel" name="label_QLKhoa_details">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>THÔNG TIN CHI TIẾT</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QTabWidget" name="tabWidget_QLKhoa_details">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>615</height>
+                          </size>
+                         </property>
+                         <property name="currentIndex">
+                          <number>0</number>
+                         </property>
+                         <widget class="QWidget" name="tab_1_QLKhoa">
+                          <attribute name="title">
+                           <string>Thông tin khoa</string>
+                          </attribute>
+                          <widget class="QFrame" name="gridFrame_tab_1_QLKhoa_buttons">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>510</y>
+                             <width>324</width>
+                             <height>68</height>
+                            </rect>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>68</height>
+                            </size>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_29">
+                            <item row="1" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_edit">
+                              <property name="text">
+                               <string>Sửa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_view">
+                              <property name="text">
+                               <string>Xem </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_add">
+                              <property name="text">
+                               <string>Thêm</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLKhoa_delete">
+                              <property name="text">
+                               <string>Xoá</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QFrame" name="formFrame_Khoa">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>331</width>
+                             <height>511</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout_Khoa">
+                            <property name="horizontalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="verticalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>10</number>
+                            </property>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_Khoa_sodienthoai">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Số điện thoại</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_Khoa_makhoa">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã khoa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_Khoa_tenkhoa">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Tên khoa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Khoa_makhoa"/>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Khoa_tenkhoa"/>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Khoa_sodienthoai"/>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                         <widget class="QWidget" name="tab_2_QLKhoa">
+                          <attribute name="title">
+                           <string>Thông tin môn học</string>
+                          </attribute>
+                          <widget class="QFrame" name="gridFrame_tab_2_QLKhoa_buttons">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>510</y>
+                             <width>324</width>
+                             <height>68</height>
+                            </rect>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>68</height>
+                            </size>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_30">
+                            <item row="1" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_edit">
+                              <property name="text">
+                               <string>Sửa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_view">
+                              <property name="text">
+                               <string>Xem </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_add">
+                              <property name="text">
+                               <string>Thêm</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_2_QLKhoa_delete">
+                              <property name="text">
+                               <string>Xoá</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </widget>
+                         <widget class="QWidget" name="tab_3_QLKhoa">
+                          <attribute name="title">
+                           <string>Điểm số</string>
+                          </attribute>
+                          <widget class="QFrame" name="gridFrame_tab_3_QLKhoa_buttons">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>510</y>
+                             <width>324</width>
+                             <height>68</height>
+                            </rect>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>68</height>
+                            </size>
+                           </property>
+                           <layout class="QGridLayout" name="gridLayout_31">
+                            <item row="1" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_edit">
+                              <property name="text">
+                               <string>Sửa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_view">
+                              <property name="text">
+                               <string>Xem </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_add">
+                              <property name="text">
+                               <string>Thêm</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_3_QLKhoa_delete">
                               <property name="text">
                                <string>Xoá</string>
                               </property>

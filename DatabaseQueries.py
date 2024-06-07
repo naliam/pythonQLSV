@@ -73,3 +73,58 @@ def fetch_data_from_sql_server(table_name, condition=None, error_handler=None):
             # Đóng kết nối và con trỏ (cursor)
             cursor.close()
             conn.close()
+# CRUD operations for KHOA
+# def add_khoa(ma_khoa, ten_khoa, so_dien_thoai):
+#     conn, cursor = connect_to_database(show_message)
+#     if not conn or not cursor:
+#         return
+#     query = "INSERT INTO [KHOA] (MaKhoa, TenKhoa, SDT) VALUES (?, ?, ?)"
+#     cursor.execute(query, (ma_khoa, ten_khoa, so_dien_thoai))
+#     conn.commit()
+#     conn.close()
+def add_khoa(khoa):
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+    
+    query = "INSERT INTO [KHOA] (MaKhoa, TenKhoa, SDT) VALUES (?, ?, ?)"
+    cursor.execute(query, (khoa.ma_khoa, khoa.ten_khoa, khoa.so_dien_thoai))
+    conn.commit()
+    conn.close()
+
+def edit_khoa(ma_khoa, ten_khoa, so_dien_thoai):
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+
+    query = "UPDATE [KHOA] SET TenKhoa = ?, SDT = ? WHERE MaKhoa = ?"
+    cursor.execute(query, (ten_khoa, so_dien_thoai, ma_khoa))
+    conn.commit()
+    conn.close()
+
+def delete_khoa(ma_khoa):
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+    
+    query = "DELETE FROM [KHOA] WHERE MaKhoa = ?"
+    cursor.execute(query, (ma_khoa,))
+    conn.commit()
+    conn.close()
+
+def search_khoa(hoten, maso):
+    # Kết nối tới cơ sở dữ liệu
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+    query = f"SELECT * FROM [KHOA] WHERE TenKhoa LIKE ? AND MaKhoa LIKE ?"
+    hoten_param = f"%{hoten}%"  # Thêm % vào trước và sau để tìm kiếm theo mẫu
+    maso_param = f"%{maso}%"
+    cursor.execute(query, (hoten_param, maso_param))
+    rows = cursor.fetchall()
+    conn.close()
+
+    return rows
+def show_message(title, message):
+    # Placeholder for the actual message display function
+    print(f"{title}: {message}")
