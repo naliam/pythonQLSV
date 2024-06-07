@@ -1185,12 +1185,26 @@ QPushButton:pressed {
                </widget>
                <widget class="QWidget" name="page_2_QLSinhVien">
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit{
-	min-height: 45px;
-	border-radius: 20px;
+                 <string notr="true">QLineEdit#lineEdit_QLSinhVien_search_2_hoten{
+	max-height: 45px;
+	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.9);
 	padding-left: 20px;
 	color: blue;
+}
+QLineEdit#lineEdit_QLSinhVien_search_2_maso{
+	max-height: 45px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit{
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 20px;
+	padding-left: 20px;
+	color: rgb(0, 0, 255);
 }
 QLineEdit:hover{
 	border: 2px solid rgb(139, 142, 139);
@@ -1214,14 +1228,8 @@ background-color: rgba(0, 0, 0, 0);
 QTableWidget{
 background-color: rgba(0, 0, 0, 0);
 }
-QFrame#verticalFrame_QLSV_search_1{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLSV_search_2{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLSV_search_3{
-	background-color:rgba(0, 0, 0, 0);
+QFrame#formFrame_SinhVien{
+background-color: rgba(0, 0, 0, 0);
 }</string>
                 </property>
                 <widget class="QFrame" name="gridFrame_QLSinhVien">
@@ -1377,8 +1385,11 @@ QFrame#verticalFrame_QLSV_search_3{
                            <height>615</height>
                           </size>
                          </property>
+                         <property name="styleSheet">
+                          <string notr="true"/>
+                         </property>
                          <property name="currentIndex">
-                          <number>2</number>
+                          <number>0</number>
                          </property>
                          <widget class="QWidget" name="tab_1_QLSinhVien">
                           <attribute name="title">
@@ -1425,6 +1436,200 @@ QFrame#verticalFrame_QLSV_search_3{
                              <widget class="QPushButton" name="pushButton_tab_1_QLSinhVien_delete">
                               <property name="text">
                                <string>Xoá</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QFrame" name="formFrame_SinhVien">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>331</width>
+                             <height>471</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout_SinhVien">
+                            <property name="horizontalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="verticalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>10</number>
+                            </property>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_SinhVien_hoten">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Họ tên</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_hoten"/>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_SinhVien_gioitinh">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Giới tính</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QComboBox" name="comboBox_SinhVien_gioitinh">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_SinhVien_ngaysinh">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Ngày sinh</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_ngaysinh"/>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_SinhVien_noisinh">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Nơi sinh</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_noisinh"/>
+                            </item>
+                            <item row="4" column="0">
+                             <widget class="QLabel" name="label_SinhVien_madantoc">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã dân tộc</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="0">
+                             <widget class="QLabel" name="label_SinhVien_matongiao">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã tôn giáo</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="0">
+                             <widget class="QLabel" name="label_SinhVien_hotencha">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Họ tên cha</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="7" column="0">
+                             <widget class="QLabel" name="label_SinhVien_nghenghiepcha">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Nghề nghiệp cha</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="8" column="0">
+                             <widget class="QLabel" name="label_SinhVien_hotenme">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Họ tên mẹ</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="9" column="0">
+                             <widget class="QLabel" name="label_SinhVien_nghenghiepme">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Nghề nghiệp mẹ</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="10" column="0">
+                             <widget class="QLabel" name="label_SinhVien_dienthoai">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Điện thoại</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_hotencha"/>
+                            </item>
+                            <item row="7" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_nghenghiepcha"/>
+                            </item>
+                            <item row="8" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_hotenme"/>
+                            </item>
+                            <item row="9" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_nghenghiepme"/>
+                            </item>
+                            <item row="10" column="1">
+                             <widget class="QLineEdit" name="lineEdit_SinhVien_dienthoai"/>
+                            </item>
+                            <item row="4" column="1">
+                             <widget class="QComboBox" name="comboBox_SinhVien_madantoc">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="1">
+                             <widget class="QComboBox" name="comboBox_SinhVien_matongiao">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
                               </property>
                              </widget>
                             </item>
@@ -1661,12 +1866,26 @@ QFrame#verticalFrame_QLSV_search_3{
                </widget>
                <widget class="QWidget" name="page_3_QLGiangVien">
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit{
-	min-height: 45px;
-	border-radius: 20px;
+                 <string notr="true">QLineEdit#lineEdit_QLGiangVien_search_2_maso{
+	min-height: 30px;
+	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.9);
 	padding-left: 20px;
 	color: blue;
+}
+QLineEdit#lineEdit_QLGiangVien_search_2_hoten{
+	min-height: 30px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit{
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 20px;
+	padding-left: 20px;
+	color: rgb(0, 0, 255);
 }
 QLineEdit:hover{
 	border: 2px solid rgb(139, 142, 139);
@@ -1690,14 +1909,8 @@ background-color: rgba(0, 0, 0, 0);
 QTableWidget{
 background-color: rgba(0, 0, 0, 0);
 }
-QFrame#verticalFrame_QLGV_search_1{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLGV_search_2{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLGV_search_3{
-	background-color:rgba(0, 0, 0, 0);
+QFrame#formFrame_GiangVien{
+background-color: rgba(0, 0, 0, 0);
 }</string>
                 </property>
                 <widget class="QFrame" name="gridFrame_QLGiangVien">
@@ -1958,10 +2171,10 @@ QFrame#verticalFrame_QLGV_search_3{
                             </size>
                            </property>
                            <layout class="QGridLayout" name="gridLayout_26">
-                            <item row="1" column="0">
-                             <widget class="QPushButton" name="pushButton_tab_1_QLGiangVien_edit">
+                            <item row="1" column="1">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLGiangVien_delete">
                               <property name="text">
-                               <string>Sửa</string>
+                               <string>Xoá</string>
                               </property>
                              </widget>
                             </item>
@@ -1972,6 +2185,13 @@ QFrame#verticalFrame_QLGV_search_3{
                               </property>
                              </widget>
                             </item>
+                            <item row="1" column="0">
+                             <widget class="QPushButton" name="pushButton_tab_1_QLGiangVien_edit">
+                              <property name="text">
+                               <string>Sửa</string>
+                              </property>
+                             </widget>
+                            </item>
                             <item row="0" column="1">
                              <widget class="QPushButton" name="pushButton_tab_1_QLGiangVien_add">
                               <property name="text">
@@ -1979,12 +2199,160 @@ QFrame#verticalFrame_QLGV_search_3{
                               </property>
                              </widget>
                             </item>
-                            <item row="1" column="1">
-                             <widget class="QPushButton" name="pushButton_tab_1_QLGiangVien_delete">
+                           </layout>
+                          </widget>
+                          <widget class="QFrame" name="formFrame_GiangVien">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>331</width>
+                             <height>511</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout_GiangVien">
+                            <property name="horizontalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="verticalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>10</number>
+                            </property>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_GiangVien_magiangvien">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
                               <property name="text">
-                               <string>Xoá</string>
+                               <string>Mã giảng viên</string>
                               </property>
                              </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_GiangVien_magiagngvien"/>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_GiangVien_tengiangvien">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Tên giảng viên</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="lineEdit_GiangVien_tengiangvien"/>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_GiangVien_gioitinh">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Giới tính</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QLineEdit" name="lineEdit_GiangVien_gioitinh"/>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_GiangVien_dienthoai">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Điện thoại</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1">
+                             <widget class="QLineEdit" name="lineEdit_GiangVien_dienthoai"/>
+                            </item>
+                            <item row="4" column="0">
+                             <widget class="QLabel" name="label_GiangVien_mamonhoc">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã môn học</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="1">
+                             <widget class="QComboBox" name="comboBox_GiangVien_mamonhoc">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="0">
+                             <widget class="QLabel" name="label_GiangVien_mahocvi">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã học vị</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="5" column="1">
+                             <widget class="QComboBox" name="comboBox_GiangVien_mahocvi">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="0">
+                             <widget class="QLabel" name="label_GiangVien_loaigiangvien">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Loại giảng viên</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="6" column="1">
+                             <widget class="QComboBox" name="comboBox_GiangVien_loaigiangvien">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="7" column="0">
+                             <widget class="QLabel" name="label_GiangVien_diachi">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Địa chỉ</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="8" column="0" colspan="2">
+                             <widget class="QPlainTextEdit" name="plainTextEdit_GiangVien_diachi"/>
                             </item>
                            </layout>
                           </widget>
@@ -2103,10 +2471,24 @@ QFrame#verticalFrame_QLGV_search_3{
                </widget>
                <widget class="QWidget" name="page_4_QLLop">
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit{
-	min-height: 45px;
-	border-radius: 20px;
+                 <string notr="true">QLineEdit#lineEdit_QLLop_search_2_maso{
+	min-height: 30px;
+	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit#lineEdit_QLLop_search_2_hoten{
+	min-height: 30px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit{
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 20px;
 	padding-left: 20px;
 	color: blue;
 }
@@ -2132,14 +2514,8 @@ background-color: rgba(0, 0, 0, 0);
 QTableWidget{
 background-color: rgba(0, 0, 0, 0);
 }
-QFrame#verticalFrame_QLLop_search_1{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLLop_search_2{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLLop_search_3{
-	background-color:rgba(0, 0, 0, 0);
+QFrame#formFrame_Lop{
+background-color: rgba(0, 0, 0, 0);
 }</string>
                 </property>
                 <widget class="QFrame" name="gridFrame_QLLop">
@@ -2372,11 +2748,11 @@ QFrame#verticalFrame_QLLop_search_3{
                           </size>
                          </property>
                          <property name="currentIndex">
-                          <number>2</number>
+                          <number>0</number>
                          </property>
                          <widget class="QWidget" name="tab_1_QLLop">
                           <attribute name="title">
-                           <string>Thông tin cá nhân</string>
+                           <string>Thông tin lớp</string>
                           </attribute>
                           <widget class="QFrame" name="gridFrame_tab_1_QLLop_buttons">
                            <property name="geometry">
@@ -2419,6 +2795,115 @@ QFrame#verticalFrame_QLLop_search_3{
                              <widget class="QPushButton" name="pushButton_tab_1_QLLop_delete">
                               <property name="text">
                                <string>Xoá</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QFrame" name="formFrame_Lop">
+                           <property name="geometry">
+                            <rect>
+                             <x>-1</x>
+                             <y>-1</y>
+                             <width>331</width>
+                             <height>511</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout_Lop">
+                            <property name="horizontalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="verticalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>10</number>
+                            </property>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_Lop_malop">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã lớp</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_Lop_tenlop">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Tên lớp</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_Lop_makhoa">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã khoa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_Lop_manamhoc">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã năm học</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="0">
+                             <widget class="QLabel" name="label_Lop_siso">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Sĩ số</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="4" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Lop_siso"/>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Lop_malop"/>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Lop_tenlop"/>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QComboBox" name="comboBox_Lop_makhoa">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="1">
+                             <widget class="QComboBox" name="comboBox_Lop_manamhoc">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
                               </property>
                              </widget>
                             </item>
@@ -2539,10 +3024,24 @@ QFrame#verticalFrame_QLLop_search_3{
                </widget>
                <widget class="QWidget" name="page_5_QLKhoa">
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit{
-	min-height: 45px;
-	border-radius: 20px;
+                 <string notr="true">QLineEdit#lineEdit_QLKhoa_search_2_maso{
+	min-height: 30px;
+	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit#lineEdit_QLKhoa_search_2_hoten{
+	min-height: 30px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit{
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 20px;
 	padding-left: 20px;
 	color: blue;
 }
@@ -2568,14 +3067,8 @@ background-color: rgba(0, 0, 0, 0);
 QTableWidget{
 background-color: rgba(0, 0, 0, 0);
 }
-QFrame#verticalFrame_QLKhoa_search_1{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLKhoa_search_2{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLKhoa_search_3{
-	background-color:rgba(0, 0, 0, 0);
+QFrame#formFrame_Khoa{
+background-color: rgba(0, 0, 0, 0);
 }</string>
                 </property>
                 <widget class="QFrame" name="gridFrame_QLKhoa">
@@ -2798,11 +3291,11 @@ QFrame#verticalFrame_QLKhoa_search_3{
                           </size>
                          </property>
                          <property name="currentIndex">
-                          <number>2</number>
+                          <number>0</number>
                          </property>
                          <widget class="QWidget" name="tab_1_QLKhoa">
                           <attribute name="title">
-                           <string>Thông tin cá nhân</string>
+                           <string>Thông tin khoa</string>
                           </attribute>
                           <widget class="QFrame" name="gridFrame_tab_1_QLKhoa_buttons">
                            <property name="geometry">
@@ -2847,6 +3340,75 @@ QFrame#verticalFrame_QLKhoa_search_3{
                                <string>Xoá</string>
                               </property>
                              </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QFrame" name="formFrame_Khoa">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>331</width>
+                             <height>511</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout_Khoa">
+                            <property name="horizontalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="verticalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>10</number>
+                            </property>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_Khoa_sodienthoai">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Số điện thoại</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_Khoa_makhoa">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã khoa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_Khoa_tenkhoa">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Tên khoa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Khoa_makhoa"/>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Khoa_tenkhoa"/>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QLineEdit" name="lineEdit_Khoa_sodienthoai"/>
                             </item>
                            </layout>
                           </widget>
@@ -2965,17 +3527,31 @@ QFrame#verticalFrame_QLKhoa_search_3{
                </widget>
                <widget class="QWidget" name="page_6_QLMonHoc">
                 <property name="styleSheet">
-                 <string notr="true">QLineEdit{
-	min-height: 45px;
-	border-radius: 20px;
+                 <string notr="true">QLineEdit#lineEdit_QLMonHoc_search_2_maso{
+	min-height: 30px;
+	border-radius: 15px;
 	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit#lineEdit_QLMonHoc_search_2_hoten{
+	min-height: 30px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding-left: 20px;
+	color: blue;
+}
+QLineEdit{
+	min-height: 30px;
+	max-height: 30px;
+	border-radius: 20px;
 	padding-left: 20px;
 	color: blue;
 }
 QLineEdit:hover{
 	border: 2px solid rgb(139, 142, 139);
 }
-QLabel#label_QLMH{
+QLabel#label_QLMonHoc{
     color: #55ffff;
     font-size: 32px;
     text-align: center;
@@ -2994,14 +3570,8 @@ background-color: rgba(0, 0, 0, 0);
 QTableWidget{
 background-color: rgba(0, 0, 0, 0);
 }
-QFrame#verticalFrame_QLMH_search_1{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLMH_search_2{
-	background-color:rgba(0, 0, 0, 0);
-}
-QFrame#verticalFrame_QLMH_search_3{
-	background-color:rgba(0, 0, 0, 0);
+QFrame#formFrame_MonHoc{
+background-color: rgba(0, 0, 0, 0);
 }</string>
                 </property>
                 <widget class="QFrame" name="gridFrame_QLMonHoc">
@@ -3229,11 +3799,11 @@ QFrame#verticalFrame_QLMH_search_3{
                           </size>
                          </property>
                          <property name="currentIndex">
-                          <number>2</number>
+                          <number>0</number>
                          </property>
                          <widget class="QWidget" name="tab_1_QLMonHoc">
                           <attribute name="title">
-                           <string>Thông tin cá nhân</string>
+                           <string>Thông tin môn học</string>
                           </attribute>
                           <widget class="QFrame" name="gridFrame_tab_1_QLMonHoc_buttons">
                            <property name="geometry">
@@ -3276,6 +3846,95 @@ QFrame#verticalFrame_QLMH_search_3{
                              <widget class="QPushButton" name="pushButton_tab_1_QLMonHoc_delete">
                               <property name="text">
                                <string>Xoá</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                          <widget class="QFrame" name="formFrame_MonHoc">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>331</width>
+                             <height>511</height>
+                            </rect>
+                           </property>
+                           <layout class="QFormLayout" name="formLayout_MonHoc">
+                            <property name="horizontalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="verticalSpacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>10</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>20</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>10</number>
+                            </property>
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="label_MonHoc_malop">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã lớp</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="label_MonHoc_tenlop">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Tên lớp</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="label_MonHoc_sotiet">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Số tiết</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="3" column="0">
+                             <widget class="QLabel" name="label_MonHoc_makhoa">
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>Mã khoa</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="lineEdit_MonHoc_malop"/>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="lineEdit_MonHoc_tenlop"/>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QLineEdit" name="lineEdit_MonHoc_sotiet"/>
+                            </item>
+                            <item row="3" column="1">
+                             <widget class="QComboBox" name="comboBox_MonHoc_makhoa">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>30</height>
+                               </size>
                               </property>
                              </widget>
                             </item>
@@ -3408,8 +4067,6 @@ QFrame#verticalFrame_QLMH_search_3{
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="../../doanPython/doanPython/icons/quanlySinhVien.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

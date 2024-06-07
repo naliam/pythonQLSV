@@ -388,12 +388,26 @@ class Ui_windowUI_main(object):
         self.verticalLayout_27.addWidget(self.label_page_1_title_2)
         self.stackedWidget.addWidget(self.page_1_Home)
         self.page_2_QLSinhVien = QtWidgets.QWidget()
-        self.page_2_QLSinhVien.setStyleSheet("QLineEdit{\n"
-"    min-height: 45px;\n"
-"    border-radius: 20px;\n"
+        self.page_2_QLSinhVien.setStyleSheet("QLineEdit#lineEdit_QLSinhVien_search_2_hoten{\n"
+"    max-height: 45px;\n"
+"    border-radius: 15px;\n"
 "    background-color: rgba(255, 255, 255, 0.9);\n"
 "    padding-left: 20px;\n"
 "    color: blue;\n"
+"}\n"
+"QLineEdit#lineEdit_QLSinhVien_search_2_maso{\n"
+"    max-height: 45px;\n"
+"    border-radius: 15px;\n"
+"    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit{\n"
+"    min-height: 30px;\n"
+"    max-height: 30px;\n"
+"    border-radius: 20px;\n"
+"    padding-left: 20px;\n"
+"    color: rgb(0, 0, 255);\n"
 "}\n"
 "QLineEdit:hover{\n"
 "    border: 2px solid rgb(139, 142, 139);\n"
@@ -417,14 +431,8 @@ class Ui_windowUI_main(object):
 "QTableWidget{\n"
 "background-color: rgba(0, 0, 0, 0);\n"
 "}\n"
-"QFrame#verticalFrame_QLSV_search_1{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLSV_search_2{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLSV_search_3{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
+"QFrame#formFrame_SinhVien{\n"
+"background-color: rgba(0, 0, 0, 0);\n"
 "}")
         self.page_2_QLSinhVien.setObjectName("page_2_QLSinhVien")
         self.gridFrame_QLSinhVien = QtWidgets.QFrame(parent=self.page_2_QLSinhVien)
@@ -482,6 +490,7 @@ class Ui_windowUI_main(object):
         self.verticalLayout_QLSinhVien_details.addWidget(self.label_QLSinhVien_details)
         self.tabWidget_QLSinhVien_details = QtWidgets.QTabWidget(parent=self.horizontalFrame_QLSinhVien_details)
         self.tabWidget_QLSinhVien_details.setMaximumSize(QtCore.QSize(16777215, 615))
+        self.tabWidget_QLSinhVien_details.setStyleSheet("")
         self.tabWidget_QLSinhVien_details.setObjectName("tabWidget_QLSinhVien_details")
         self.tab_1_QLSinhVien = QtWidgets.QWidget()
         self.tab_1_QLSinhVien.setObjectName("tab_1_QLSinhVien")
@@ -503,6 +512,93 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLSinhVien_delete = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLSinhVien_buttons)
         self.pushButton_tab_1_QLSinhVien_delete.setObjectName("pushButton_tab_1_QLSinhVien_delete")
         self.gridLayout_7.addWidget(self.pushButton_tab_1_QLSinhVien_delete, 1, 1, 1, 1)
+        self.formFrame_SinhVien = QtWidgets.QFrame(parent=self.tab_1_QLSinhVien)
+        self.formFrame_SinhVien.setGeometry(QtCore.QRect(0, 0, 331, 471))
+        self.formFrame_SinhVien.setObjectName("formFrame_SinhVien")
+        self.formLayout_SinhVien = QtWidgets.QFormLayout(self.formFrame_SinhVien)
+        self.formLayout_SinhVien.setContentsMargins(10, 10, 20, 10)
+        self.formLayout_SinhVien.setSpacing(10)
+        self.formLayout_SinhVien.setObjectName("formLayout_SinhVien")
+        self.label_SinhVien_hoten = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_hoten.setStyleSheet("")
+        self.label_SinhVien_hoten.setObjectName("label_SinhVien_hoten")
+        self.formLayout_SinhVien.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_hoten)
+        self.lineEdit_SinhVien_hoten = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_hoten.setObjectName("lineEdit_SinhVien_hoten")
+        self.formLayout_SinhVien.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_hoten)
+        self.label_SinhVien_gioitinh = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_gioitinh.setStyleSheet("")
+        self.label_SinhVien_gioitinh.setObjectName("label_SinhVien_gioitinh")
+        self.formLayout_SinhVien.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_gioitinh)
+        self.comboBox_SinhVien_gioitinh = QtWidgets.QComboBox(parent=self.formFrame_SinhVien)
+        self.comboBox_SinhVien_gioitinh.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_SinhVien_gioitinh.setObjectName("comboBox_SinhVien_gioitinh")
+        self.formLayout_SinhVien.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_SinhVien_gioitinh)
+        self.label_SinhVien_ngaysinh = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_ngaysinh.setStyleSheet("")
+        self.label_SinhVien_ngaysinh.setObjectName("label_SinhVien_ngaysinh")
+        self.formLayout_SinhVien.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_ngaysinh)
+        self.lineEdit_SinhVien_ngaysinh = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_ngaysinh.setObjectName("lineEdit_SinhVien_ngaysinh")
+        self.formLayout_SinhVien.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_ngaysinh)
+        self.label_SinhVien_noisinh = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_noisinh.setStyleSheet("")
+        self.label_SinhVien_noisinh.setObjectName("label_SinhVien_noisinh")
+        self.formLayout_SinhVien.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_noisinh)
+        self.lineEdit_SinhVien_noisinh = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_noisinh.setObjectName("lineEdit_SinhVien_noisinh")
+        self.formLayout_SinhVien.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_noisinh)
+        self.label_SinhVien_madantoc = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_madantoc.setStyleSheet("")
+        self.label_SinhVien_madantoc.setObjectName("label_SinhVien_madantoc")
+        self.formLayout_SinhVien.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_madantoc)
+        self.label_SinhVien_matongiao = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_matongiao.setStyleSheet("")
+        self.label_SinhVien_matongiao.setObjectName("label_SinhVien_matongiao")
+        self.formLayout_SinhVien.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_matongiao)
+        self.label_SinhVien_hotencha = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_hotencha.setStyleSheet("")
+        self.label_SinhVien_hotencha.setObjectName("label_SinhVien_hotencha")
+        self.formLayout_SinhVien.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_hotencha)
+        self.label_SinhVien_nghenghiepcha = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_nghenghiepcha.setStyleSheet("")
+        self.label_SinhVien_nghenghiepcha.setObjectName("label_SinhVien_nghenghiepcha")
+        self.formLayout_SinhVien.setWidget(7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_nghenghiepcha)
+        self.label_SinhVien_hotenme = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_hotenme.setStyleSheet("")
+        self.label_SinhVien_hotenme.setObjectName("label_SinhVien_hotenme")
+        self.formLayout_SinhVien.setWidget(8, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_hotenme)
+        self.label_SinhVien_nghenghiepme = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_nghenghiepme.setStyleSheet("")
+        self.label_SinhVien_nghenghiepme.setObjectName("label_SinhVien_nghenghiepme")
+        self.formLayout_SinhVien.setWidget(9, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_nghenghiepme)
+        self.label_SinhVien_dienthoai = QtWidgets.QLabel(parent=self.formFrame_SinhVien)
+        self.label_SinhVien_dienthoai.setStyleSheet("")
+        self.label_SinhVien_dienthoai.setObjectName("label_SinhVien_dienthoai")
+        self.formLayout_SinhVien.setWidget(10, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_SinhVien_dienthoai)
+        self.lineEdit_SinhVien_hotencha = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_hotencha.setObjectName("lineEdit_SinhVien_hotencha")
+        self.formLayout_SinhVien.setWidget(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_hotencha)
+        self.lineEdit_SinhVien_nghenghiepcha = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_nghenghiepcha.setObjectName("lineEdit_SinhVien_nghenghiepcha")
+        self.formLayout_SinhVien.setWidget(7, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_nghenghiepcha)
+        self.lineEdit_SinhVien_hotenme = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_hotenme.setObjectName("lineEdit_SinhVien_hotenme")
+        self.formLayout_SinhVien.setWidget(8, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_hotenme)
+        self.lineEdit_SinhVien_nghenghiepme = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_nghenghiepme.setObjectName("lineEdit_SinhVien_nghenghiepme")
+        self.formLayout_SinhVien.setWidget(9, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_nghenghiepme)
+        self.lineEdit_SinhVien_dienthoai = QtWidgets.QLineEdit(parent=self.formFrame_SinhVien)
+        self.lineEdit_SinhVien_dienthoai.setObjectName("lineEdit_SinhVien_dienthoai")
+        self.formLayout_SinhVien.setWidget(10, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_SinhVien_dienthoai)
+        self.comboBox_SinhVien_madantoc = QtWidgets.QComboBox(parent=self.formFrame_SinhVien)
+        self.comboBox_SinhVien_madantoc.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_SinhVien_madantoc.setObjectName("comboBox_SinhVien_madantoc")
+        self.formLayout_SinhVien.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_SinhVien_madantoc)
+        self.comboBox_SinhVien_matongiao = QtWidgets.QComboBox(parent=self.formFrame_SinhVien)
+        self.comboBox_SinhVien_matongiao.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_SinhVien_matongiao.setObjectName("comboBox_SinhVien_matongiao")
+        self.formLayout_SinhVien.setWidget(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_SinhVien_matongiao)
         self.tabWidget_QLSinhVien_details.addTab(self.tab_1_QLSinhVien, "")
         self.tab_2_QLSinhVien = QtWidgets.QWidget()
         self.tab_2_QLSinhVien.setObjectName("tab_2_QLSinhVien")
@@ -610,12 +706,26 @@ class Ui_windowUI_main(object):
         self.gridLayout_6.addWidget(self.verticalFrame_QLSinhVien_search, 0, 0, 1, 1)
         self.stackedWidget.addWidget(self.page_2_QLSinhVien)
         self.page_3_QLGiangVien = QtWidgets.QWidget()
-        self.page_3_QLGiangVien.setStyleSheet("QLineEdit{\n"
-"    min-height: 45px;\n"
-"    border-radius: 20px;\n"
+        self.page_3_QLGiangVien.setStyleSheet("QLineEdit#lineEdit_QLGiangVien_search_2_maso{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
 "    background-color: rgba(255, 255, 255, 0.9);\n"
 "    padding-left: 20px;\n"
 "    color: blue;\n"
+"}\n"
+"QLineEdit#lineEdit_QLGiangVien_search_2_hoten{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
+"    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit{\n"
+"    min-height: 30px;\n"
+"    max-height: 30px;\n"
+"    border-radius: 20px;\n"
+"    padding-left: 20px;\n"
+"    color: rgb(0, 0, 255);\n"
 "}\n"
 "QLineEdit:hover{\n"
 "    border: 2px solid rgb(139, 142, 139);\n"
@@ -639,14 +749,8 @@ class Ui_windowUI_main(object):
 "QTableWidget{\n"
 "background-color: rgba(0, 0, 0, 0);\n"
 "}\n"
-"QFrame#verticalFrame_QLGV_search_1{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLGV_search_2{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLGV_search_3{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
+"QFrame#formFrame_GiangVien{\n"
+"background-color: rgba(0, 0, 0, 0);\n"
 "}")
         self.page_3_QLGiangVien.setObjectName("page_3_QLGiangVien")
         self.gridFrame_QLGiangVien = QtWidgets.QFrame(parent=self.page_3_QLGiangVien)
@@ -762,18 +866,84 @@ class Ui_windowUI_main(object):
         self.gridFrame_tab_1_QLGiangVien_buttons.setObjectName("gridFrame_tab_1_QLGiangVien_buttons")
         self.gridLayout_26 = QtWidgets.QGridLayout(self.gridFrame_tab_1_QLGiangVien_buttons)
         self.gridLayout_26.setObjectName("gridLayout_26")
-        self.pushButton_tab_1_QLGiangVien_edit = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
-        self.pushButton_tab_1_QLGiangVien_edit.setObjectName("pushButton_tab_1_QLGiangVien_edit")
-        self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_edit, 1, 0, 1, 1)
-        self.pushButton_tab_1_QLGiangVien_view = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
-        self.pushButton_tab_1_QLGiangVien_view.setObjectName("pushButton_tab_1_QLGiangVien_view")
-        self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_view, 0, 0, 1, 1)
-        self.pushButton_tab_1_QLGiangVien_add = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
-        self.pushButton_tab_1_QLGiangVien_add.setObjectName("pushButton_tab_1_QLGiangVien_add")
-        self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_add, 0, 1, 1, 1)
         self.pushButton_tab_1_QLGiangVien_delete = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
         self.pushButton_tab_1_QLGiangVien_delete.setObjectName("pushButton_tab_1_QLGiangVien_delete")
         self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_delete, 1, 1, 1, 1)
+        self.pushButton_tab_1_QLGiangVien_view = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
+        self.pushButton_tab_1_QLGiangVien_view.setObjectName("pushButton_tab_1_QLGiangVien_view")
+        self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_view, 0, 0, 1, 1)
+        self.pushButton_tab_1_QLGiangVien_edit = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
+        self.pushButton_tab_1_QLGiangVien_edit.setObjectName("pushButton_tab_1_QLGiangVien_edit")
+        self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_edit, 1, 0, 1, 1)
+        self.pushButton_tab_1_QLGiangVien_add = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLGiangVien_buttons)
+        self.pushButton_tab_1_QLGiangVien_add.setObjectName("pushButton_tab_1_QLGiangVien_add")
+        self.gridLayout_26.addWidget(self.pushButton_tab_1_QLGiangVien_add, 0, 1, 1, 1)
+        self.formFrame_GiangVien = QtWidgets.QFrame(parent=self.tab_1_QLGiangVien)
+        self.formFrame_GiangVien.setGeometry(QtCore.QRect(0, 0, 331, 511))
+        self.formFrame_GiangVien.setObjectName("formFrame_GiangVien")
+        self.formLayout_GiangVien = QtWidgets.QFormLayout(self.formFrame_GiangVien)
+        self.formLayout_GiangVien.setContentsMargins(10, 10, 20, 10)
+        self.formLayout_GiangVien.setSpacing(10)
+        self.formLayout_GiangVien.setObjectName("formLayout_GiangVien")
+        self.label_GiangVien_magiangvien = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_magiangvien.setStyleSheet("")
+        self.label_GiangVien_magiangvien.setObjectName("label_GiangVien_magiangvien")
+        self.formLayout_GiangVien.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_magiangvien)
+        self.lineEdit_GiangVien_magiagngvien = QtWidgets.QLineEdit(parent=self.formFrame_GiangVien)
+        self.lineEdit_GiangVien_magiagngvien.setObjectName("lineEdit_GiangVien_magiagngvien")
+        self.formLayout_GiangVien.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_GiangVien_magiagngvien)
+        self.label_GiangVien_tengiangvien = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_tengiangvien.setStyleSheet("")
+        self.label_GiangVien_tengiangvien.setObjectName("label_GiangVien_tengiangvien")
+        self.formLayout_GiangVien.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_tengiangvien)
+        self.lineEdit_GiangVien_tengiangvien = QtWidgets.QLineEdit(parent=self.formFrame_GiangVien)
+        self.lineEdit_GiangVien_tengiangvien.setObjectName("lineEdit_GiangVien_tengiangvien")
+        self.formLayout_GiangVien.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_GiangVien_tengiangvien)
+        self.label_GiangVien_gioitinh = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_gioitinh.setStyleSheet("")
+        self.label_GiangVien_gioitinh.setObjectName("label_GiangVien_gioitinh")
+        self.formLayout_GiangVien.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_gioitinh)
+        self.lineEdit_GiangVien_gioitinh = QtWidgets.QLineEdit(parent=self.formFrame_GiangVien)
+        self.lineEdit_GiangVien_gioitinh.setObjectName("lineEdit_GiangVien_gioitinh")
+        self.formLayout_GiangVien.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_GiangVien_gioitinh)
+        self.label_GiangVien_dienthoai = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_dienthoai.setStyleSheet("")
+        self.label_GiangVien_dienthoai.setObjectName("label_GiangVien_dienthoai")
+        self.formLayout_GiangVien.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_dienthoai)
+        self.lineEdit_GiangVien_dienthoai = QtWidgets.QLineEdit(parent=self.formFrame_GiangVien)
+        self.lineEdit_GiangVien_dienthoai.setObjectName("lineEdit_GiangVien_dienthoai")
+        self.formLayout_GiangVien.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_GiangVien_dienthoai)
+        self.label_GiangVien_mamonhoc = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_mamonhoc.setStyleSheet("")
+        self.label_GiangVien_mamonhoc.setObjectName("label_GiangVien_mamonhoc")
+        self.formLayout_GiangVien.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_mamonhoc)
+        self.comboBox_GiangVien_mamonhoc = QtWidgets.QComboBox(parent=self.formFrame_GiangVien)
+        self.comboBox_GiangVien_mamonhoc.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_GiangVien_mamonhoc.setObjectName("comboBox_GiangVien_mamonhoc")
+        self.formLayout_GiangVien.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_GiangVien_mamonhoc)
+        self.label_GiangVien_mahocvi = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_mahocvi.setStyleSheet("")
+        self.label_GiangVien_mahocvi.setObjectName("label_GiangVien_mahocvi")
+        self.formLayout_GiangVien.setWidget(5, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_mahocvi)
+        self.comboBox_GiangVien_mahocvi = QtWidgets.QComboBox(parent=self.formFrame_GiangVien)
+        self.comboBox_GiangVien_mahocvi.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_GiangVien_mahocvi.setObjectName("comboBox_GiangVien_mahocvi")
+        self.formLayout_GiangVien.setWidget(5, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_GiangVien_mahocvi)
+        self.label_GiangVien_loaigiangvien = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_loaigiangvien.setStyleSheet("")
+        self.label_GiangVien_loaigiangvien.setObjectName("label_GiangVien_loaigiangvien")
+        self.formLayout_GiangVien.setWidget(6, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_loaigiangvien)
+        self.comboBox_GiangVien_loaigiangvien = QtWidgets.QComboBox(parent=self.formFrame_GiangVien)
+        self.comboBox_GiangVien_loaigiangvien.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_GiangVien_loaigiangvien.setObjectName("comboBox_GiangVien_loaigiangvien")
+        self.formLayout_GiangVien.setWidget(6, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_GiangVien_loaigiangvien)
+        self.label_GiangVien_diachi = QtWidgets.QLabel(parent=self.formFrame_GiangVien)
+        self.label_GiangVien_diachi.setStyleSheet("")
+        self.label_GiangVien_diachi.setObjectName("label_GiangVien_diachi")
+        self.formLayout_GiangVien.setWidget(7, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_GiangVien_diachi)
+        self.plainTextEdit_GiangVien_diachi = QtWidgets.QPlainTextEdit(parent=self.formFrame_GiangVien)
+        self.plainTextEdit_GiangVien_diachi.setObjectName("plainTextEdit_GiangVien_diachi")
+        self.formLayout_GiangVien.setWidget(8, QtWidgets.QFormLayout.ItemRole.SpanningRole, self.plainTextEdit_GiangVien_diachi)
         self.tabWidget_QLGiangVien_details.addTab(self.tab_1_QLGiangVien, "")
         self.tab_2_QLGiangVien = QtWidgets.QWidget()
         self.tab_2_QLGiangVien.setObjectName("tab_2_QLGiangVien")
@@ -822,10 +992,24 @@ class Ui_windowUI_main(object):
         self.gridLayout_3.addWidget(self.horizontalFrame_QLGiangVien_details, 0, 1, 2, 1)
         self.stackedWidget.addWidget(self.page_3_QLGiangVien)
         self.page_4_QLLop = QtWidgets.QWidget()
-        self.page_4_QLLop.setStyleSheet("QLineEdit{\n"
-"    min-height: 45px;\n"
-"    border-radius: 20px;\n"
+        self.page_4_QLLop.setStyleSheet("QLineEdit#lineEdit_QLLop_search_2_maso{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
 "    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit#lineEdit_QLLop_search_2_hoten{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
+"    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit{\n"
+"    min-height: 30px;\n"
+"    max-height: 30px;\n"
+"    border-radius: 20px;\n"
 "    padding-left: 20px;\n"
 "    color: blue;\n"
 "}\n"
@@ -851,14 +1035,8 @@ class Ui_windowUI_main(object):
 "QTableWidget{\n"
 "background-color: rgba(0, 0, 0, 0);\n"
 "}\n"
-"QFrame#verticalFrame_QLLop_search_1{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLLop_search_2{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLLop_search_3{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
+"QFrame#formFrame_Lop{\n"
+"background-color: rgba(0, 0, 0, 0);\n"
 "}")
         self.page_4_QLLop.setObjectName("page_4_QLLop")
         self.gridFrame_QLLop = QtWidgets.QFrame(parent=self.page_4_QLLop)
@@ -986,6 +1164,50 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLLop_delete = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLLop_buttons)
         self.pushButton_tab_1_QLLop_delete.setObjectName("pushButton_tab_1_QLLop_delete")
         self.gridLayout_32.addWidget(self.pushButton_tab_1_QLLop_delete, 1, 1, 1, 1)
+        self.formFrame_Lop = QtWidgets.QFrame(parent=self.tab_1_QLLop)
+        self.formFrame_Lop.setGeometry(QtCore.QRect(-1, -1, 331, 511))
+        self.formFrame_Lop.setObjectName("formFrame_Lop")
+        self.formLayout_Lop = QtWidgets.QFormLayout(self.formFrame_Lop)
+        self.formLayout_Lop.setContentsMargins(10, 10, 20, 10)
+        self.formLayout_Lop.setSpacing(10)
+        self.formLayout_Lop.setObjectName("formLayout_Lop")
+        self.label_Lop_malop = QtWidgets.QLabel(parent=self.formFrame_Lop)
+        self.label_Lop_malop.setStyleSheet("")
+        self.label_Lop_malop.setObjectName("label_Lop_malop")
+        self.formLayout_Lop.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Lop_malop)
+        self.label_Lop_tenlop = QtWidgets.QLabel(parent=self.formFrame_Lop)
+        self.label_Lop_tenlop.setStyleSheet("")
+        self.label_Lop_tenlop.setObjectName("label_Lop_tenlop")
+        self.formLayout_Lop.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Lop_tenlop)
+        self.label_Lop_makhoa = QtWidgets.QLabel(parent=self.formFrame_Lop)
+        self.label_Lop_makhoa.setStyleSheet("")
+        self.label_Lop_makhoa.setObjectName("label_Lop_makhoa")
+        self.formLayout_Lop.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Lop_makhoa)
+        self.label_Lop_manamhoc = QtWidgets.QLabel(parent=self.formFrame_Lop)
+        self.label_Lop_manamhoc.setStyleSheet("")
+        self.label_Lop_manamhoc.setObjectName("label_Lop_manamhoc")
+        self.formLayout_Lop.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Lop_manamhoc)
+        self.label_Lop_siso = QtWidgets.QLabel(parent=self.formFrame_Lop)
+        self.label_Lop_siso.setStyleSheet("")
+        self.label_Lop_siso.setObjectName("label_Lop_siso")
+        self.formLayout_Lop.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Lop_siso)
+        self.lineEdit_Lop_siso = QtWidgets.QLineEdit(parent=self.formFrame_Lop)
+        self.lineEdit_Lop_siso.setObjectName("lineEdit_Lop_siso")
+        self.formLayout_Lop.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_Lop_siso)
+        self.lineEdit_Lop_malop = QtWidgets.QLineEdit(parent=self.formFrame_Lop)
+        self.lineEdit_Lop_malop.setObjectName("lineEdit_Lop_malop")
+        self.formLayout_Lop.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_Lop_malop)
+        self.lineEdit_Lop_tenlop = QtWidgets.QLineEdit(parent=self.formFrame_Lop)
+        self.lineEdit_Lop_tenlop.setObjectName("lineEdit_Lop_tenlop")
+        self.formLayout_Lop.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_Lop_tenlop)
+        self.comboBox_Lop_makhoa = QtWidgets.QComboBox(parent=self.formFrame_Lop)
+        self.comboBox_Lop_makhoa.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_Lop_makhoa.setObjectName("comboBox_Lop_makhoa")
+        self.formLayout_Lop.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_Lop_makhoa)
+        self.comboBox_Lop_manamhoc = QtWidgets.QComboBox(parent=self.formFrame_Lop)
+        self.comboBox_Lop_manamhoc.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_Lop_manamhoc.setObjectName("comboBox_Lop_manamhoc")
+        self.formLayout_Lop.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_Lop_manamhoc)
         self.tabWidget_QLLop_details.addTab(self.tab_1_QLLop, "")
         self.tab_2_QLLop = QtWidgets.QWidget()
         self.tab_2_QLLop.setObjectName("tab_2_QLLop")
@@ -1034,10 +1256,24 @@ class Ui_windowUI_main(object):
         self.gridLayout_4.addWidget(self.horizontalFrame_QLLop_details, 0, 1, 2, 1)
         self.stackedWidget.addWidget(self.page_4_QLLop)
         self.page_5_QLKhoa = QtWidgets.QWidget()
-        self.page_5_QLKhoa.setStyleSheet("QLineEdit{\n"
-"    min-height: 45px;\n"
-"    border-radius: 20px;\n"
+        self.page_5_QLKhoa.setStyleSheet("QLineEdit#lineEdit_QLKhoa_search_2_maso{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
 "    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit#lineEdit_QLKhoa_search_2_hoten{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
+"    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit{\n"
+"    min-height: 30px;\n"
+"    max-height: 30px;\n"
+"    border-radius: 20px;\n"
 "    padding-left: 20px;\n"
 "    color: blue;\n"
 "}\n"
@@ -1063,14 +1299,8 @@ class Ui_windowUI_main(object):
 "QTableWidget{\n"
 "background-color: rgba(0, 0, 0, 0);\n"
 "}\n"
-"QFrame#verticalFrame_QLKhoa_search_1{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLKhoa_search_2{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLKhoa_search_3{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
+"QFrame#formFrame_Khoa{\n"
+"background-color: rgba(0, 0, 0, 0);\n"
 "}")
         self.page_5_QLKhoa.setObjectName("page_5_QLKhoa")
         self.gridFrame_QLKhoa = QtWidgets.QFrame(parent=self.page_5_QLKhoa)
@@ -1194,6 +1424,34 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLKhoa_delete = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLKhoa_buttons)
         self.pushButton_tab_1_QLKhoa_delete.setObjectName("pushButton_tab_1_QLKhoa_delete")
         self.gridLayout_29.addWidget(self.pushButton_tab_1_QLKhoa_delete, 1, 1, 1, 1)
+        self.formFrame_Khoa = QtWidgets.QFrame(parent=self.tab_1_QLKhoa)
+        self.formFrame_Khoa.setGeometry(QtCore.QRect(0, 0, 331, 511))
+        self.formFrame_Khoa.setObjectName("formFrame_Khoa")
+        self.formLayout_Khoa = QtWidgets.QFormLayout(self.formFrame_Khoa)
+        self.formLayout_Khoa.setContentsMargins(10, 10, 20, 10)
+        self.formLayout_Khoa.setSpacing(10)
+        self.formLayout_Khoa.setObjectName("formLayout_Khoa")
+        self.label_Khoa_sodienthoai = QtWidgets.QLabel(parent=self.formFrame_Khoa)
+        self.label_Khoa_sodienthoai.setStyleSheet("")
+        self.label_Khoa_sodienthoai.setObjectName("label_Khoa_sodienthoai")
+        self.formLayout_Khoa.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Khoa_sodienthoai)
+        self.label_Khoa_makhoa = QtWidgets.QLabel(parent=self.formFrame_Khoa)
+        self.label_Khoa_makhoa.setStyleSheet("")
+        self.label_Khoa_makhoa.setObjectName("label_Khoa_makhoa")
+        self.formLayout_Khoa.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Khoa_makhoa)
+        self.label_Khoa_tenkhoa = QtWidgets.QLabel(parent=self.formFrame_Khoa)
+        self.label_Khoa_tenkhoa.setStyleSheet("")
+        self.label_Khoa_tenkhoa.setObjectName("label_Khoa_tenkhoa")
+        self.formLayout_Khoa.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_Khoa_tenkhoa)
+        self.lineEdit_Khoa_makhoa = QtWidgets.QLineEdit(parent=self.formFrame_Khoa)
+        self.lineEdit_Khoa_makhoa.setObjectName("lineEdit_Khoa_makhoa")
+        self.formLayout_Khoa.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_Khoa_makhoa)
+        self.lineEdit_Khoa_tenkhoa = QtWidgets.QLineEdit(parent=self.formFrame_Khoa)
+        self.lineEdit_Khoa_tenkhoa.setObjectName("lineEdit_Khoa_tenkhoa")
+        self.formLayout_Khoa.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_Khoa_tenkhoa)
+        self.lineEdit_Khoa_sodienthoai = QtWidgets.QLineEdit(parent=self.formFrame_Khoa)
+        self.lineEdit_Khoa_sodienthoai.setObjectName("lineEdit_Khoa_sodienthoai")
+        self.formLayout_Khoa.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_Khoa_sodienthoai)
         self.tabWidget_QLKhoa_details.addTab(self.tab_1_QLKhoa, "")
         self.tab_2_QLKhoa = QtWidgets.QWidget()
         self.tab_2_QLKhoa.setObjectName("tab_2_QLKhoa")
@@ -1242,17 +1500,31 @@ class Ui_windowUI_main(object):
         self.gridLayout_2.addWidget(self.horizontalFrame_QLKhoa_details, 0, 1, 2, 1)
         self.stackedWidget.addWidget(self.page_5_QLKhoa)
         self.page_6_QLMonHoc = QtWidgets.QWidget()
-        self.page_6_QLMonHoc.setStyleSheet("QLineEdit{\n"
-"    min-height: 45px;\n"
-"    border-radius: 20px;\n"
+        self.page_6_QLMonHoc.setStyleSheet("QLineEdit#lineEdit_QLMonHoc_search_2_maso{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
 "    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit#lineEdit_QLMonHoc_search_2_hoten{\n"
+"    min-height: 30px;\n"
+"    border-radius: 15px;\n"
+"    background-color: rgba(255, 255, 255, 0.9);\n"
+"    padding-left: 20px;\n"
+"    color: blue;\n"
+"}\n"
+"QLineEdit{\n"
+"    min-height: 30px;\n"
+"    max-height: 30px;\n"
+"    border-radius: 20px;\n"
 "    padding-left: 20px;\n"
 "    color: blue;\n"
 "}\n"
 "QLineEdit:hover{\n"
 "    border: 2px solid rgb(139, 142, 139);\n"
 "}\n"
-"QLabel#label_QLMH{\n"
+"QLabel#label_QLMonHoc{\n"
 "    color: #55ffff;\n"
 "    font-size: 32px;\n"
 "    text-align: center;\n"
@@ -1271,14 +1543,8 @@ class Ui_windowUI_main(object):
 "QTableWidget{\n"
 "background-color: rgba(0, 0, 0, 0);\n"
 "}\n"
-"QFrame#verticalFrame_QLMH_search_1{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLMH_search_2{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
-"}\n"
-"QFrame#verticalFrame_QLMH_search_3{\n"
-"    background-color:rgba(0, 0, 0, 0);\n"
+"QFrame#formFrame_MonHoc{\n"
+"background-color: rgba(0, 0, 0, 0);\n"
 "}")
         self.page_6_QLMonHoc.setObjectName("page_6_QLMonHoc")
         self.gridFrame_QLMonHoc = QtWidgets.QFrame(parent=self.page_6_QLMonHoc)
@@ -1404,6 +1670,42 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLMonHoc_delete = QtWidgets.QPushButton(parent=self.gridFrame_tab_1_QLMonHoc_buttons)
         self.pushButton_tab_1_QLMonHoc_delete.setObjectName("pushButton_tab_1_QLMonHoc_delete")
         self.gridLayout_23.addWidget(self.pushButton_tab_1_QLMonHoc_delete, 1, 1, 1, 1)
+        self.formFrame_MonHoc = QtWidgets.QFrame(parent=self.tab_1_QLMonHoc)
+        self.formFrame_MonHoc.setGeometry(QtCore.QRect(0, 0, 331, 511))
+        self.formFrame_MonHoc.setObjectName("formFrame_MonHoc")
+        self.formLayout_MonHoc = QtWidgets.QFormLayout(self.formFrame_MonHoc)
+        self.formLayout_MonHoc.setContentsMargins(10, 10, 20, 10)
+        self.formLayout_MonHoc.setSpacing(10)
+        self.formLayout_MonHoc.setObjectName("formLayout_MonHoc")
+        self.label_MonHoc_malop = QtWidgets.QLabel(parent=self.formFrame_MonHoc)
+        self.label_MonHoc_malop.setStyleSheet("")
+        self.label_MonHoc_malop.setObjectName("label_MonHoc_malop")
+        self.formLayout_MonHoc.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_MonHoc_malop)
+        self.label_MonHoc_tenlop = QtWidgets.QLabel(parent=self.formFrame_MonHoc)
+        self.label_MonHoc_tenlop.setStyleSheet("")
+        self.label_MonHoc_tenlop.setObjectName("label_MonHoc_tenlop")
+        self.formLayout_MonHoc.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_MonHoc_tenlop)
+        self.label_MonHoc_sotiet = QtWidgets.QLabel(parent=self.formFrame_MonHoc)
+        self.label_MonHoc_sotiet.setStyleSheet("")
+        self.label_MonHoc_sotiet.setObjectName("label_MonHoc_sotiet")
+        self.formLayout_MonHoc.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_MonHoc_sotiet)
+        self.label_MonHoc_makhoa = QtWidgets.QLabel(parent=self.formFrame_MonHoc)
+        self.label_MonHoc_makhoa.setStyleSheet("")
+        self.label_MonHoc_makhoa.setObjectName("label_MonHoc_makhoa")
+        self.formLayout_MonHoc.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_MonHoc_makhoa)
+        self.lineEdit_MonHoc_malop = QtWidgets.QLineEdit(parent=self.formFrame_MonHoc)
+        self.lineEdit_MonHoc_malop.setObjectName("lineEdit_MonHoc_malop")
+        self.formLayout_MonHoc.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_MonHoc_malop)
+        self.lineEdit_MonHoc_tenlop = QtWidgets.QLineEdit(parent=self.formFrame_MonHoc)
+        self.lineEdit_MonHoc_tenlop.setObjectName("lineEdit_MonHoc_tenlop")
+        self.formLayout_MonHoc.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_MonHoc_tenlop)
+        self.lineEdit_MonHoc_sotiet = QtWidgets.QLineEdit(parent=self.formFrame_MonHoc)
+        self.lineEdit_MonHoc_sotiet.setObjectName("lineEdit_MonHoc_sotiet")
+        self.formLayout_MonHoc.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.lineEdit_MonHoc_sotiet)
+        self.comboBox_MonHoc_makhoa = QtWidgets.QComboBox(parent=self.formFrame_MonHoc)
+        self.comboBox_MonHoc_makhoa.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.comboBox_MonHoc_makhoa.setObjectName("comboBox_MonHoc_makhoa")
+        self.formLayout_MonHoc.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.comboBox_MonHoc_makhoa)
         self.tabWidget_QLMonHoc_details.addTab(self.tab_1_QLMonHoc, "")
         self.tab_2_QLMonHoc = QtWidgets.QWidget()
         self.tab_2_QLMonHoc.setObjectName("tab_2_QLMonHoc")
@@ -1458,11 +1760,11 @@ class Ui_windowUI_main(object):
         windowUI_main.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(windowUI_main)
-        self.tabWidget_QLSinhVien_details.setCurrentIndex(2)
+        self.tabWidget_QLSinhVien_details.setCurrentIndex(0)
         self.tabWidget_QLGiangVien_details.setCurrentIndex(0)
-        self.tabWidget_QLLop_details.setCurrentIndex(2)
-        self.tabWidget_QLKhoa_details.setCurrentIndex(2)
-        self.tabWidget_QLMonHoc_details.setCurrentIndex(2)
+        self.tabWidget_QLLop_details.setCurrentIndex(0)
+        self.tabWidget_QLKhoa_details.setCurrentIndex(0)
+        self.tabWidget_QLMonHoc_details.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(windowUI_main)
 
     def retranslateUi(self, windowUI_main):
@@ -1568,6 +1870,17 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLSinhVien_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_1_QLSinhVien_add.setText(_translate("windowUI_main", "Thêm"))
         self.pushButton_tab_1_QLSinhVien_delete.setText(_translate("windowUI_main", "Xoá"))
+        self.label_SinhVien_hoten.setText(_translate("windowUI_main", "Họ tên"))
+        self.label_SinhVien_gioitinh.setText(_translate("windowUI_main", "Giới tính"))
+        self.label_SinhVien_ngaysinh.setText(_translate("windowUI_main", "Ngày sinh"))
+        self.label_SinhVien_noisinh.setText(_translate("windowUI_main", "Nơi sinh"))
+        self.label_SinhVien_madantoc.setText(_translate("windowUI_main", "Mã dân tộc"))
+        self.label_SinhVien_matongiao.setText(_translate("windowUI_main", "Mã tôn giáo"))
+        self.label_SinhVien_hotencha.setText(_translate("windowUI_main", "Họ tên cha"))
+        self.label_SinhVien_nghenghiepcha.setText(_translate("windowUI_main", "Nghề nghiệp cha"))
+        self.label_SinhVien_hotenme.setText(_translate("windowUI_main", "Họ tên mẹ"))
+        self.label_SinhVien_nghenghiepme.setText(_translate("windowUI_main", "Nghề nghiệp mẹ"))
+        self.label_SinhVien_dienthoai.setText(_translate("windowUI_main", "Điện thoại"))
         self.tabWidget_QLSinhVien_details.setTabText(self.tabWidget_QLSinhVien_details.indexOf(self.tab_1_QLSinhVien), _translate("windowUI_main", "Thông tin cá nhân"))
         self.pushButton_tab_2_QLSinhVien_edit.setText(_translate("windowUI_main", "Sửa"))
         self.pushButton_tab_2_QLSinhVien_view.setText(_translate("windowUI_main", "Xem "))
@@ -1608,10 +1921,18 @@ class Ui_windowUI_main(object):
         item = self.tableWidget_QLGiangVien.horizontalHeaderItem(7)
         item.setText(_translate("windowUI_main", "Loại giảng viên"))
         self.label_QLGiangVien_details.setText(_translate("windowUI_main", "THÔNG TIN CHI TIẾT"))
-        self.pushButton_tab_1_QLGiangVien_edit.setText(_translate("windowUI_main", "Sửa"))
-        self.pushButton_tab_1_QLGiangVien_view.setText(_translate("windowUI_main", "Xem "))
-        self.pushButton_tab_1_QLGiangVien_add.setText(_translate("windowUI_main", "Thêm"))
         self.pushButton_tab_1_QLGiangVien_delete.setText(_translate("windowUI_main", "Xoá"))
+        self.pushButton_tab_1_QLGiangVien_view.setText(_translate("windowUI_main", "Xem "))
+        self.pushButton_tab_1_QLGiangVien_edit.setText(_translate("windowUI_main", "Sửa"))
+        self.pushButton_tab_1_QLGiangVien_add.setText(_translate("windowUI_main", "Thêm"))
+        self.label_GiangVien_magiangvien.setText(_translate("windowUI_main", "Mã giảng viên"))
+        self.label_GiangVien_tengiangvien.setText(_translate("windowUI_main", "Tên giảng viên"))
+        self.label_GiangVien_gioitinh.setText(_translate("windowUI_main", "Giới tính"))
+        self.label_GiangVien_dienthoai.setText(_translate("windowUI_main", "Điện thoại"))
+        self.label_GiangVien_mamonhoc.setText(_translate("windowUI_main", "Mã môn học"))
+        self.label_GiangVien_mahocvi.setText(_translate("windowUI_main", "Mã học vị"))
+        self.label_GiangVien_loaigiangvien.setText(_translate("windowUI_main", "Loại giảng viên"))
+        self.label_GiangVien_diachi.setText(_translate("windowUI_main", "Địa chỉ"))
         self.tabWidget_QLGiangVien_details.setTabText(self.tabWidget_QLGiangVien_details.indexOf(self.tab_1_QLGiangVien), _translate("windowUI_main", "Thông tin cá nhân"))
         self.pushButton_tab_2_QLGiangVien_edit.setText(_translate("windowUI_main", "Sửa"))
         self.pushButton_tab_2_QLGiangVien_view.setText(_translate("windowUI_main", "Xem "))
@@ -1644,7 +1965,12 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLLop_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_1_QLLop_add.setText(_translate("windowUI_main", "Thêm"))
         self.pushButton_tab_1_QLLop_delete.setText(_translate("windowUI_main", "Xoá"))
-        self.tabWidget_QLLop_details.setTabText(self.tabWidget_QLLop_details.indexOf(self.tab_1_QLLop), _translate("windowUI_main", "Thông tin cá nhân"))
+        self.label_Lop_malop.setText(_translate("windowUI_main", "Mã lớp"))
+        self.label_Lop_tenlop.setText(_translate("windowUI_main", "Tên lớp"))
+        self.label_Lop_makhoa.setText(_translate("windowUI_main", "Mã khoa"))
+        self.label_Lop_manamhoc.setText(_translate("windowUI_main", "Mã năm học"))
+        self.label_Lop_siso.setText(_translate("windowUI_main", "Sĩ số"))
+        self.tabWidget_QLLop_details.setTabText(self.tabWidget_QLLop_details.indexOf(self.tab_1_QLLop), _translate("windowUI_main", "Thông tin lớp"))
         self.pushButton_tab_2_QLLop_edit.setText(_translate("windowUI_main", "Sửa"))
         self.pushButton_tab_2_QLLop_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_2_QLLop_add.setText(_translate("windowUI_main", "Thêm"))
@@ -1672,7 +1998,10 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLKhoa_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_1_QLKhoa_add.setText(_translate("windowUI_main", "Thêm"))
         self.pushButton_tab_1_QLKhoa_delete.setText(_translate("windowUI_main", "Xoá"))
-        self.tabWidget_QLKhoa_details.setTabText(self.tabWidget_QLKhoa_details.indexOf(self.tab_1_QLKhoa), _translate("windowUI_main", "Thông tin cá nhân"))
+        self.label_Khoa_sodienthoai.setText(_translate("windowUI_main", "Số điện thoại"))
+        self.label_Khoa_makhoa.setText(_translate("windowUI_main", "Mã khoa"))
+        self.label_Khoa_tenkhoa.setText(_translate("windowUI_main", "Tên khoa"))
+        self.tabWidget_QLKhoa_details.setTabText(self.tabWidget_QLKhoa_details.indexOf(self.tab_1_QLKhoa), _translate("windowUI_main", "Thông tin khoa"))
         self.pushButton_tab_2_QLKhoa_edit.setText(_translate("windowUI_main", "Sửa"))
         self.pushButton_tab_2_QLKhoa_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_2_QLKhoa_add.setText(_translate("windowUI_main", "Thêm"))
@@ -1702,7 +2031,11 @@ class Ui_windowUI_main(object):
         self.pushButton_tab_1_QLMonHoc_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_1_QLMonHoc_add.setText(_translate("windowUI_main", "Thêm"))
         self.pushButton_tab_1_QLMonHoc_delete.setText(_translate("windowUI_main", "Xoá"))
-        self.tabWidget_QLMonHoc_details.setTabText(self.tabWidget_QLMonHoc_details.indexOf(self.tab_1_QLMonHoc), _translate("windowUI_main", "Thông tin cá nhân"))
+        self.label_MonHoc_malop.setText(_translate("windowUI_main", "Mã lớp"))
+        self.label_MonHoc_tenlop.setText(_translate("windowUI_main", "Tên lớp"))
+        self.label_MonHoc_sotiet.setText(_translate("windowUI_main", "Số tiết"))
+        self.label_MonHoc_makhoa.setText(_translate("windowUI_main", "Mã khoa"))
+        self.tabWidget_QLMonHoc_details.setTabText(self.tabWidget_QLMonHoc_details.indexOf(self.tab_1_QLMonHoc), _translate("windowUI_main", "Thông tin môn học"))
         self.pushButton_tab_2_QLMonHoc_edit.setText(_translate("windowUI_main", "Sửa"))
         self.pushButton_tab_2_QLMonHoc_view.setText(_translate("windowUI_main", "Xem "))
         self.pushButton_tab_2_QLMonHoc_add.setText(_translate("windowUI_main", "Thêm"))

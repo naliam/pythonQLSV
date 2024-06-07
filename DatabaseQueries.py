@@ -67,7 +67,7 @@ def fetch_data_from_sql_server(table_name, condition=None, error_handler=None):
             return rows
         except pyodbc.Error as e:
             # Xử lý lỗi truy vấn cơ sở dữ liệu
-            error_handler("Lỗi truy vấn cơ sở dữ liệu", "Không thể thực hiện truy vấn kiểm tra đăng nhập.")
+            error_handler("Lỗi truy vấn cơ sở dữ liệu", "Không thể thực hiện truy vấn này.")
             return False
         finally:
             # Đóng kết nối và con trỏ (cursor)
