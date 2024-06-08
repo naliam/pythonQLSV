@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem, QApplica
 
 from ui_main import Ui_windowUI_main
 from Khoa import Khoa  # Import the Khoa class from the Khoa module
+from MonHoc import MonHoc
 class MainUI(QMainWindow):
     def __init__(self, textID):
         super().__init__()
@@ -37,6 +38,15 @@ class MainUI(QMainWindow):
         self.uic2.pushButton_tab_1_QLKhoa_view.clicked.connect(self.view_khoa)
         self.uic2.pushButton_QLKhoa_search_3_timkiem.clicked.connect(self.search_khoa)
         self.uic2.pushButton_QLKhoa_search_3_lammoi.clicked.connect(self.refresh_khoa)
+
+        # Connect buttons to CRUD methods of MonHoc
+        self.uic2.pushButton_tab_1_QLMonHoc_add.clicked.connect(self.add_mon_hoc)
+        # self.uic2.pushButton_tab_1_QLMonHoc_edit.clicked.connect(self.edit_mon_hoc)
+        self.uic2.pushButton_tab_1_QLMonHoc_delete.clicked.connect(self.delete_mon_hoc)
+        self.uic2.pushButton_tab_1_QLMonHoc_view.clicked.connect(self.view_mon_hoc)
+        self.uic2.pushButton_QLMonHoc_search_3_timkiem.clicked.connect(self.search_mon_hoc)
+        self.uic2.pushButton_QLMonHoc_search_3_lammoi.clicked.connect(self.refresh_mon_hoc)
+
 
     def fn_showpage_1_Home(self):
         self.uic2.stackedWidget.setCurrentWidget(self.uic2.page_1_Home)
@@ -79,64 +89,6 @@ class MainUI(QMainWindow):
             table_widget.insertRow(row_number)
             for column_number, column_data in enumerate(row_data):
                 table_widget.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(str(column_data)))
-            
-    # def view_khoa(self):
-    #     rows = DatabaseQueries.fetch_data_from_sql_server('KHOA')
-    #     if rows:
-    #         self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
-
-
-
-    # def edit_khoa(self):
-    #     selected_row = self.uic2.tableWidget_QLKhoa.currentRow()
-    #     if selected_row >= 0:
-    #         ma_khoa = self.uic2.lineEdit_Khoa_makhoa.text()
-    #         ten_khoa = self.uic2.lineEdit_Khoa_tenkhoa.text()
-    #         so_dien_thoai = self.uic2.lineEdit_Khoa_sodienthoai.text()
-    #         khoa = Khoa(ma_khoa, ten_khoa, so_dien_thoai)
-    #         try:
-    #             DatabaseQueries.edit_khoa(khoa)
-    #             self.view_khoa()
-    #             self.show_message("Success", "Khoa edited successfully")
-    #         except Exception as e:
-    #             self.show_message("Error", f"Failed to edit Khoa: {str(e)}")
-    #     else:
-    #         self.show_message("Error", "No row selected")
-
-    # def delete_khoa(self):
-    #     selected_row = self.uic2.tableWidget_QLKhoa.currentRow()
-    #     if selected_row >= 0:
-    #         ma_khoa = self.uic2.tableWidget_QLKhoa.item(selected_row, 0).text()
-    #         try:
-    #             DatabaseQueries.delete_khoa(ma_khoa)
-    #             self.view_khoa()
-    #             self.show_message("Success", "Khoa deleted successfully")
-    #         except Exception as e:
-    #             self.show_message("Error", f"Failed to delete Khoa: {str(e)}")
-    #     else:
-    #         self.show_message("Error", "No row selected")
-
-    # def search_khoa(self):
-    #     hoten = self.uic2.lineEdit_QLKhoa_search_2_hoten.text()
-    #     maso = self.uic2.lineEdit_QLKhoa_search_2_maso.text()
-    #     rows = DatabaseQueries.search_khoa(hoten, maso) 
-    #     if rows:
-    #         self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
-    #     else:
-    #         self.show_message("Error", "No rows found")
-
-
-    # CRUD methods for Khoa
-    # def add_khoa(self):
-    #     ma_khoa = self.uic2.lineEdit_Khoa_makhoa.text()
-    #     ten_khoa = self.uic2.lineEdit_Khoa_tenkhoa.text()
-    #     so_dien_thoai = self.uic2.lineEdit_Khoa_sodienthoai.text()
-    #     try:
-    #         DatabaseQueries.add_khoa(ma_khoa, ten_khoa, so_dien_thoai)
-    #         self.view_khoa()
-    #         self.show_message("Success", "Khoa added successfully")
-    #     except Exception as e:
-    #         self.show_message("Error", f"Failed to add Khoa: {str(e)}")
 
     def add_khoa(self):
         ma_khoa = self.uic2.lineEdit_Khoa_makhoa.text()
@@ -148,9 +100,9 @@ class MainUI(QMainWindow):
             DatabaseQueries.add_khoa(khoa)
             # Lấy lại dữ liệu từ cơ sở dữ liệu và hiển thị lên bảng
             self.view_khoa()
-            self.show_message("Success", "Khoa added successfully")
+            self.show_message("Success", "Them khoa thanh cong!")
         except Exception as e:
-            self.show_message("Error", f"Failed to add Khoa: {str(e)}")
+            self.show_message("Error", f"Loi xay ra khi them khoa: {str(e)}")
 
     def edit_khoa(self):
         selected_row = self.uic2.tableWidget_QLKhoa.currentRow()
@@ -161,11 +113,11 @@ class MainUI(QMainWindow):
             try:
                 DatabaseQueries.edit_khoa(ma_khoa, ten_khoa, so_dien_thoai)
                 self.view_khoa()
-                self.show_message("Success", "Khoa edited successfully")
+                self.show_message("Success", "Chinh sua khoa thanh cong!")
             except Exception as e:
-                self.show_message("Error", f"Failed to edit Khoa: {str(e)}")
+                self.show_message("Error", f"Loi xay ra khi xoa khoa: {str(e)}")
         else:
-            self.show_message("Error", "No row selected")
+            self.show_message("Error", "Vui long chon khoa")
 
     def delete_khoa(self):
         selected_row = self.uic2.tableWidget_QLKhoa.currentRow()
@@ -174,11 +126,11 @@ class MainUI(QMainWindow):
             try:
                 DatabaseQueries.delete_khoa(ma_khoa)
                 self.view_khoa()
-                self.show_message("Success", "Khoa deleted successfully")
+                self.show_message("Success", "Xóa khoa thành công!")
             except Exception as e:
-                self.show_message("Error", f"Failed to delete Khoa: {str(e)}")
+                self.show_message("Error", f"Lỗi xảy ra khi xóa khoa: {str(e)}")
         else:
-            self.show_message("Error", "No row selected")
+            self.show_message("Error", "Hãy chọn khoa trước khi xóa")
 
     def view_khoa(self):
         rows = DatabaseQueries.fetch_data_from_sql_server('KHOA')
@@ -192,7 +144,7 @@ class MainUI(QMainWindow):
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
         else:
-            self.show_message("Error", "No row selected")
+            self.show_message("Error", "Không tìm thấy khoa")
 
     def refresh_khoa(self):
         self.uic2.lineEdit_QLKhoa_search_2_hoten.clear()
@@ -200,6 +152,56 @@ class MainUI(QMainWindow):
         rows = DatabaseQueries.fetch_data_from_sql_server('KHOA')
         if rows:
             self.display_data_in_table(rows, self.uic2.tableWidget_QLKhoa)
+
+    # CRUD for MONHOC
+    def view_mon_hoc(self):
+        rows = DatabaseQueries.fetch_data_from_sql_server('MONHOC')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
+
+    def search_mon_hoc(self):
+        mamonhoc = self.uic2.lineEdit_QLMonHoc_search_2_maso.text()
+        monhoc = self.uic2.lineEdit_QLMonHoc_search_2_hoten.text()
+        rows = DatabaseQueries.search_mon_hoc(monhoc, mamonhoc)
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
+        else:
+            self.show_message("Error", "Không tìm thấy môn học")
+
+    def add_mon_hoc(self):
+        ma_mon_hoc = self.uic2.lineEdit_MonHoc_malop.text()
+        ten_mon_hoc = self.uic2.lineEdit_MonHoc_tenlop.text()
+        so_tiet = self.uic2.lineEdit_MonHoc_sotiet.text()
+        ma_khoa = self.uic2.comboBox_MonHoc_makhoa.text()
+        mon_hoc = MonHoc(ma_mon_hoc, ten_mon_hoc, so_tiet, ma_khoa)
+        try:
+            # Thêm đối tượng Môn học vào cơ sở dữ liệu
+            DatabaseQueries.add_mon_hoc(mon_hoc)
+            # Lấy lại dữ liệu từ cơ sở dữ liệu và hiển thị lên bảng
+            self.view_mon_hoc()
+            self.show_message("Success", "Thêm môn học thành công!")
+        except Exception as e:
+            self.show_message("Error", f"Lỗi xảy ra khi thêm môn học: {str(e)}")
+
+    def delete_mon_hoc(self):
+        selected_row = self.uic2.tableWidget_QLMonHoc.currentRow()
+        if selected_row >= 0:
+            ma_mon_hoc = self.uic2.tableWidget_QLMonHoc.item(selected_row, 0).text()
+            try:
+                DatabaseQueries.delete_mon_hoc(ma_mon_hoc)
+                self.view_mon_hoc()
+                self.show_message("Success", "Xóa môn học thành công!")
+            except Exception as e:
+                self.show_message("Error", f"Lỗi xảy ra khi xóa môn học: {str(e)}")
+        else:
+            self.show_message("Error", "Hãy chọn môn học trước khi xóa")
+
+    def refresh_mon_hoc(self):
+        self.uic2.lineEdit_QLMonHoc_search_2_hoten.clear()
+        self.uic2.lineEdit_QLMonHoc_search_2_maso.clear()
+        rows = DatabaseQueries.fetch_data_from_sql_server('MONHOC')
+        if rows:
+            self.display_data_in_table(rows, self.uic2.tableWidget_QLMonHoc)
 
     def show_message(self, title, message):
         msg = QMessageBox()

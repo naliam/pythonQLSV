@@ -1,13 +1,6 @@
 USE master
 GO
-IF EXISHV0001
-(
-	SELECT * 
-	FROM   master..sysdatabases 
-	WHERE  name = N'QLSINHVIEN'
-)
-DROP DATABASE quanlySinhVien
-GO
+
 
 CREATE DATABASE quanlySinhVien 
 

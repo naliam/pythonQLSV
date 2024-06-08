@@ -125,6 +125,51 @@ def search_khoa(hoten, maso):
     conn.close()
 
     return rows
+
+# CRUD operations for MONHOC
+# def add_khoa(ma_mon_hoc, ten_mon_hoc, so_tiet, ma_khoa):
+#     conn, cursor = connect_to_database(show_message)
+#     if not conn or not cursor:
+#         return
+#     query = "INSERT INTO [MONHOC] (MaMonHoc, TenMonHoc, SoTiet, TenKhoa) VALUES (?, ?, ?)"
+#     cursor.execute(query, (ma_mon_hoc, ten_mon_hoc, so_tiet, ma_khoa))
+#     conn.commit()
+#     conn.close()
+def search_mon_hoc(monhoc, maso):
+    # Kết nối tới cơ sở dữ liệu
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+    query = f"SELECT * FROM [MONHOC] WHERE TenMonHoc LIKE ? AND MaMonHoc LIKE ?"
+    ten_mon_param = f"%{monhoc}%"  # Thêm % vào trước và sau để tìm kiếm theo mẫu
+    maso_param = f"%{maso}%"
+    cursor.execute(query, (ten_mon_param, maso_param))
+    rows = cursor.fetchall()
+    conn.close()
+
+    return rows
+
+def add_mon_hoc(monhoc):
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+
+    query = "INSERT INTO [MONHOC] (MaMonHoc, TenMonHoc, SoTiet, TenKhoa) VALUES (?, ?, ?, ?)"
+    cursor.execute(query, (monhoc.ma_mon_hoc, monhoc.ten_mon_hoc, monhoc.so_tiet, monhoc.ten_khoa))
+    conn.commit()
+    conn.close()
+
+def delete_mon_hoc(mamon):
+    conn, cursor = connect_to_database(show_message)
+    if not conn or not cursor:
+        return
+
+    query = "DELETE FROM [MONHOC] WHERE MaMonHoc = ?"
+    cursor.execute(query, (mamon,))
+    conn.commit()
+    conn.close()
+
+# Hiển thị message thông báo
 def show_message(title, message):
     # Placeholder for the actual message display function
     print(f"{title}: {message}")
